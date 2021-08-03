@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package events_monitoring.v1;
+
+option java_multiple_files = true;
+option java_package = "com.parrothq.events_monitoring.v1";
+
+import "google/protobuf/any.proto";
+import "google/protobuf/timestamp.proto";
+
+message Header {
+	string event_type = 1;
+	google.protobuf.Timestamp timestamp = 2;
+}
+
+message Event {
+	Header header = 1;
+	google.protobuf.Any spec = 2;
+}
