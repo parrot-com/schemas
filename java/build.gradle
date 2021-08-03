@@ -1,0 +1,4 @@
+allprojects {
+    group = 'com.parrothq.schemas'
+    version = '1.0'
+}
