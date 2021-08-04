@@ -17,6 +17,7 @@ private static final long serialVersionUID = 0L;
   }
   private Header() {
     eventType_ = "";
+    correlationId_ = "";
   }
 
   @java.lang.Override
@@ -56,6 +57,12 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 18: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            correlationId_ = s;
+            break;
+          }
+          case 26: {
             com.google.protobuf.Timestamp.Builder subBuilder = null;
             if (timestamp_ != null) {
               subBuilder = timestamp_.toBuilder();
@@ -138,10 +145,48 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int TIMESTAMP_FIELD_NUMBER = 2;
+  public static final int CORRELATION_ID_FIELD_NUMBER = 2;
+  private volatile java.lang.Object correlationId_;
+  /**
+   * <code>string correlation_id = 2;</code>
+   * @return The correlationId.
+   */
+  @java.lang.Override
+  public java.lang.String getCorrelationId() {
+    java.lang.Object ref = correlationId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      correlationId_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string correlation_id = 2;</code>
+   * @return The bytes for correlationId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getCorrelationIdBytes() {
+    java.lang.Object ref = correlationId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      correlationId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int TIMESTAMP_FIELD_NUMBER = 3;
   private com.google.protobuf.Timestamp timestamp_;
   /**
-   * <code>.google.protobuf.Timestamp timestamp = 2;</code>
+   * <code>.google.protobuf.Timestamp timestamp = 3;</code>
    * @return Whether the timestamp field is set.
    */
   @java.lang.Override
@@ -149,7 +194,7 @@ private static final long serialVersionUID = 0L;
     return timestamp_ != null;
   }
   /**
-   * <code>.google.protobuf.Timestamp timestamp = 2;</code>
+   * <code>.google.protobuf.Timestamp timestamp = 3;</code>
    * @return The timestamp.
    */
   @java.lang.Override
@@ -157,7 +202,7 @@ private static final long serialVersionUID = 0L;
     return timestamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timestamp_;
   }
   /**
-   * <code>.google.protobuf.Timestamp timestamp = 2;</code>
+   * <code>.google.protobuf.Timestamp timestamp = 3;</code>
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder() {
@@ -181,8 +226,11 @@ private static final long serialVersionUID = 0L;
     if (!getEventTypeBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, eventType_);
     }
+    if (!getCorrelationIdBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, correlationId_);
+    }
     if (timestamp_ != null) {
-      output.writeMessage(2, getTimestamp());
+      output.writeMessage(3, getTimestamp());
     }
     unknownFields.writeTo(output);
   }
@@ -196,9 +244,12 @@ private static final long serialVersionUID = 0L;
     if (!getEventTypeBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, eventType_);
     }
+    if (!getCorrelationIdBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, correlationId_);
+    }
     if (timestamp_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(2, getTimestamp());
+        .computeMessageSize(3, getTimestamp());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -217,6 +268,8 @@ private static final long serialVersionUID = 0L;
 
     if (!getEventType()
         .equals(other.getEventType())) return false;
+    if (!getCorrelationId()
+        .equals(other.getCorrelationId())) return false;
     if (hasTimestamp() != other.hasTimestamp()) return false;
     if (hasTimestamp()) {
       if (!getTimestamp()
@@ -235,6 +288,8 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + EVENT_TYPE_FIELD_NUMBER;
     hash = (53 * hash) + getEventType().hashCode();
+    hash = (37 * hash) + CORRELATION_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getCorrelationId().hashCode();
     if (hasTimestamp()) {
       hash = (37 * hash) + TIMESTAMP_FIELD_NUMBER;
       hash = (53 * hash) + getTimestamp().hashCode();
@@ -374,6 +429,8 @@ private static final long serialVersionUID = 0L;
       super.clear();
       eventType_ = "";
 
+      correlationId_ = "";
+
       if (timestampBuilder_ == null) {
         timestamp_ = null;
       } else {
@@ -407,6 +464,7 @@ private static final long serialVersionUID = 0L;
     public com.parrothq.events_monitoring.v1.Header buildPartial() {
       com.parrothq.events_monitoring.v1.Header result = new com.parrothq.events_monitoring.v1.Header(this);
       result.eventType_ = eventType_;
+      result.correlationId_ = correlationId_;
       if (timestampBuilder_ == null) {
         result.timestamp_ = timestamp_;
       } else {
@@ -462,6 +520,10 @@ private static final long serialVersionUID = 0L;
       if (other == com.parrothq.events_monitoring.v1.Header.getDefaultInstance()) return this;
       if (!other.getEventType().isEmpty()) {
         eventType_ = other.eventType_;
+        onChanged();
+      }
+      if (!other.getCorrelationId().isEmpty()) {
+        correlationId_ = other.correlationId_;
         onChanged();
       }
       if (other.hasTimestamp()) {
@@ -572,18 +634,94 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private java.lang.Object correlationId_ = "";
+    /**
+     * <code>string correlation_id = 2;</code>
+     * @return The correlationId.
+     */
+    public java.lang.String getCorrelationId() {
+      java.lang.Object ref = correlationId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        correlationId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string correlation_id = 2;</code>
+     * @return The bytes for correlationId.
+     */
+    public com.google.protobuf.ByteString
+        getCorrelationIdBytes() {
+      java.lang.Object ref = correlationId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        correlationId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string correlation_id = 2;</code>
+     * @param value The correlationId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCorrelationId(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      correlationId_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string correlation_id = 2;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCorrelationId() {
+      
+      correlationId_ = getDefaultInstance().getCorrelationId();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string correlation_id = 2;</code>
+     * @param value The bytes for correlationId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCorrelationIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      correlationId_ = value;
+      onChanged();
+      return this;
+    }
+
     private com.google.protobuf.Timestamp timestamp_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> timestampBuilder_;
     /**
-     * <code>.google.protobuf.Timestamp timestamp = 2;</code>
+     * <code>.google.protobuf.Timestamp timestamp = 3;</code>
      * @return Whether the timestamp field is set.
      */
     public boolean hasTimestamp() {
       return timestampBuilder_ != null || timestamp_ != null;
     }
     /**
-     * <code>.google.protobuf.Timestamp timestamp = 2;</code>
+     * <code>.google.protobuf.Timestamp timestamp = 3;</code>
      * @return The timestamp.
      */
     public com.google.protobuf.Timestamp getTimestamp() {
@@ -594,7 +732,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.google.protobuf.Timestamp timestamp = 2;</code>
+     * <code>.google.protobuf.Timestamp timestamp = 3;</code>
      */
     public Builder setTimestamp(com.google.protobuf.Timestamp value) {
       if (timestampBuilder_ == null) {
@@ -610,7 +748,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.google.protobuf.Timestamp timestamp = 2;</code>
+     * <code>.google.protobuf.Timestamp timestamp = 3;</code>
      */
     public Builder setTimestamp(
         com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -624,7 +762,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.google.protobuf.Timestamp timestamp = 2;</code>
+     * <code>.google.protobuf.Timestamp timestamp = 3;</code>
      */
     public Builder mergeTimestamp(com.google.protobuf.Timestamp value) {
       if (timestampBuilder_ == null) {
@@ -642,7 +780,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.google.protobuf.Timestamp timestamp = 2;</code>
+     * <code>.google.protobuf.Timestamp timestamp = 3;</code>
      */
     public Builder clearTimestamp() {
       if (timestampBuilder_ == null) {
@@ -656,7 +794,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.google.protobuf.Timestamp timestamp = 2;</code>
+     * <code>.google.protobuf.Timestamp timestamp = 3;</code>
      */
     public com.google.protobuf.Timestamp.Builder getTimestampBuilder() {
       
@@ -664,7 +802,7 @@ private static final long serialVersionUID = 0L;
       return getTimestampFieldBuilder().getBuilder();
     }
     /**
-     * <code>.google.protobuf.Timestamp timestamp = 2;</code>
+     * <code>.google.protobuf.Timestamp timestamp = 3;</code>
      */
     public com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder() {
       if (timestampBuilder_ != null) {
@@ -675,7 +813,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.google.protobuf.Timestamp timestamp = 2;</code>
+     * <code>.google.protobuf.Timestamp timestamp = 3;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 

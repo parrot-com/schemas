@@ -35,13 +35,13 @@ public final class Events {
     java.lang.String[] descriptorData = {
       "\n!events_monitoring/v1/events.proto\022\024eve" +
       "nts_monitoring.v1\032\031google/protobuf/any.p" +
-      "roto\032\037google/protobuf/timestamp.proto\"K\n" +
-      "\006Header\022\022\n\nevent_type\030\001 \001(\t\022-\n\ttimestamp" +
-      "\030\002 \001(\0132\032.google.protobuf.Timestamp\"Y\n\005Ev" +
-      "ent\022,\n\006header\030\001 \001(\0132\034.events_monitoring." +
-      "v1.Header\022\"\n\004spec\030\002 \001(\0132\024.google.protobu" +
-      "f.AnyB%\n!com.parrothq.events_monitoring." +
-      "v1P\001b\006proto3"
+      "roto\032\037google/protobuf/timestamp.proto\"c\n" +
+      "\006Header\022\022\n\nevent_type\030\001 \001(\t\022\026\n\016correlati" +
+      "on_id\030\002 \001(\t\022-\n\ttimestamp\030\003 \001(\0132\032.google." +
+      "protobuf.Timestamp\"Y\n\005Event\022,\n\006header\030\001 " +
+      "\001(\0132\034.events_monitoring.v1.Header\022\"\n\004spe" +
+      "c\030\002 \001(\0132\024.google.protobuf.AnyB%\n!com.par" +
+      "rothq.events_monitoring.v1P\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -54,7 +54,7 @@ public final class Events {
     internal_static_events_monitoring_v1_Header_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_events_monitoring_v1_Header_descriptor,
-        new java.lang.String[] { "EventType", "Timestamp", });
+        new java.lang.String[] { "EventType", "CorrelationId", "Timestamp", });
     internal_static_events_monitoring_v1_Event_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_events_monitoring_v1_Event_fieldAccessorTable = new

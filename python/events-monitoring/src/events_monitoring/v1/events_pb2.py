@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'\n!com.parrothq.events_monitoring.v1P\001',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n!events_monitoring/v1/events.proto\x12\x14\x65vents_monitoring.v1\x1a\x19google/protobuf/any.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"K\n\x06Header\x12\x12\n\nevent_type\x18\x01 \x01(\t\x12-\n\ttimestamp\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\"Y\n\x05\x45vent\x12,\n\x06header\x18\x01 \x01(\x0b\x32\x1c.events_monitoring.v1.Header\x12\"\n\x04spec\x18\x02 \x01(\x0b\x32\x14.google.protobuf.AnyB%\n!com.parrothq.events_monitoring.v1P\x01\x62\x06proto3'
+  serialized_pb=b'\n!events_monitoring/v1/events.proto\x12\x14\x65vents_monitoring.v1\x1a\x19google/protobuf/any.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"c\n\x06Header\x12\x12\n\nevent_type\x18\x01 \x01(\t\x12\x16\n\x0e\x63orrelation_id\x18\x02 \x01(\t\x12-\n\ttimestamp\x18\x03 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\"Y\n\x05\x45vent\x12,\n\x06header\x18\x01 \x01(\x0b\x32\x1c.events_monitoring.v1.Header\x12\"\n\x04spec\x18\x02 \x01(\x0b\x32\x14.google.protobuf.AnyB%\n!com.parrothq.events_monitoring.v1P\x01\x62\x06proto3'
   ,
   dependencies=[google_dot_protobuf_dot_any__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,])
 
@@ -44,8 +44,15 @@ _HEADER = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='timestamp', full_name='events_monitoring.v1.Header.timestamp', index=1,
-      number=2, type=11, cpp_type=10, label=1,
+      name='correlation_id', full_name='events_monitoring.v1.Header.correlation_id', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='timestamp', full_name='events_monitoring.v1.Header.timestamp', index=2,
+      number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -63,7 +70,7 @@ _HEADER = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=119,
-  serialized_end=194,
+  serialized_end=218,
 )
 
 
@@ -101,8 +108,8 @@ _EVENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=196,
-  serialized_end=285,
+  serialized_start=220,
+  serialized_end=309,
 )
 
 _HEADER.fields_by_name['timestamp'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP

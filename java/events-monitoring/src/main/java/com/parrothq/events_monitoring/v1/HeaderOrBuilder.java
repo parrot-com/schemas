@@ -20,17 +20,29 @@ public interface HeaderOrBuilder extends
       getEventTypeBytes();
 
   /**
-   * <code>.google.protobuf.Timestamp timestamp = 2;</code>
+   * <code>string correlation_id = 2;</code>
+   * @return The correlationId.
+   */
+  java.lang.String getCorrelationId();
+  /**
+   * <code>string correlation_id = 2;</code>
+   * @return The bytes for correlationId.
+   */
+  com.google.protobuf.ByteString
+      getCorrelationIdBytes();
+
+  /**
+   * <code>.google.protobuf.Timestamp timestamp = 3;</code>
    * @return Whether the timestamp field is set.
    */
   boolean hasTimestamp();
   /**
-   * <code>.google.protobuf.Timestamp timestamp = 2;</code>
+   * <code>.google.protobuf.Timestamp timestamp = 3;</code>
    * @return The timestamp.
    */
   com.google.protobuf.Timestamp getTimestamp();
   /**
-   * <code>.google.protobuf.Timestamp timestamp = 2;</code>
+   * <code>.google.protobuf.Timestamp timestamp = 3;</code>
    */
   com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder();
 }

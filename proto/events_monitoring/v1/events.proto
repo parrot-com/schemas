@@ -10,7 +10,8 @@ import "google/protobuf/timestamp.proto";
 
 message Header {
 	string event_type = 1;
-	google.protobuf.Timestamp timestamp = 2;
+	string correlation_id = 2;
+	google.protobuf.Timestamp timestamp = 3;
 }
 
 message Event {
