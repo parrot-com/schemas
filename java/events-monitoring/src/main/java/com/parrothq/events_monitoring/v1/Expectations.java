@@ -15,25 +15,25 @@ public final class Expectations {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_events_monitoring_v1_StartRoughDraft_descriptor;
+    internal_static_events_monitoring_v1_RecordingPreprocessingStarted_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_events_monitoring_v1_StartRoughDraft_fieldAccessorTable;
+      internal_static_events_monitoring_v1_RecordingPreprocessingStarted_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_events_monitoring_v1_EndRoughDraft_descriptor;
+    internal_static_events_monitoring_v1_LiveTranscriptRoughDraftCompleted_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_events_monitoring_v1_EndRoughDraft_fieldAccessorTable;
+      internal_static_events_monitoring_v1_LiveTranscriptRoughDraftCompleted_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_events_monitoring_v1_StartDiarizedRoughDraft_descriptor;
+    internal_static_events_monitoring_v1_RoughDraftCompleted_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_events_monitoring_v1_StartDiarizedRoughDraft_fieldAccessorTable;
+      internal_static_events_monitoring_v1_RoughDraftCompleted_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_events_monitoring_v1_EndDiarizedRoughDraft_descriptor;
+    internal_static_events_monitoring_v1_RoughDraftWithSpeakersCompleted_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_events_monitoring_v1_EndDiarizedRoughDraft_fieldAccessorTable;
+      internal_static_events_monitoring_v1_RoughDraftWithSpeakersCompleted_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -44,43 +44,44 @@ public final class Expectations {
   static {
     java.lang.String[] descriptorData = {
       "\n\'events_monitoring/v1/expectations.prot" +
-      "o\022\024events_monitoring.v1\"E\n\017StartRoughDra" +
-      "ft\022\024\n\014recording_id\030\001 \001(\t\022\034\n\024audio_length" +
-      "_seconds\030\002 \001(\005\"%\n\rEndRoughDraft\022\024\n\014recor" +
-      "ding_id\030\001 \001(\t\"M\n\027StartDiarizedRoughDraft" +
-      "\022\024\n\014recording_id\030\001 \001(\t\022\034\n\024audio_length_s" +
-      "econds\030\002 \001(\005\"-\n\025EndDiarizedRoughDraft\022\024\n" +
-      "\014recording_id\030\001 \001(\tB%\n!com.parrothq.even" +
-      "ts_monitoring.v1P\001b\006proto3"
+      "o\022\024events_monitoring.v1\"t\n\035RecordingPrep" +
+      "rocessingStarted\022\034\n\024audio_length_seconds" +
+      "\030\001 \001(\005\0225\n\006source\030\002 \001(\0162%.events_monitori" +
+      "ng.v1.RecordingSource\"#\n!LiveTranscriptR" +
+      "oughDraftCompleted\"\025\n\023RoughDraftComplete" +
+      "d\"!\n\037RoughDraftWithSpeakersCompleted*K\n\017" +
+      "RecordingSource\022\034\n\030RECORDING_SOURCE_UNKN" +
+      "OWN\020\000\022\n\n\006UPLOAD\020\001\022\016\n\nDEPOSITION\020\002B%\n!com" +
+      ".parrothq.events_monitoring.v1P\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         });
-    internal_static_events_monitoring_v1_StartRoughDraft_descriptor =
+    internal_static_events_monitoring_v1_RecordingPreprocessingStarted_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_events_monitoring_v1_StartRoughDraft_fieldAccessorTable = new
+    internal_static_events_monitoring_v1_RecordingPreprocessingStarted_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_events_monitoring_v1_StartRoughDraft_descriptor,
-        new java.lang.String[] { "RecordingId", "AudioLengthSeconds", });
-    internal_static_events_monitoring_v1_EndRoughDraft_descriptor =
+        internal_static_events_monitoring_v1_RecordingPreprocessingStarted_descriptor,
+        new java.lang.String[] { "AudioLengthSeconds", "Source", });
+    internal_static_events_monitoring_v1_LiveTranscriptRoughDraftCompleted_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_events_monitoring_v1_EndRoughDraft_fieldAccessorTable = new
+    internal_static_events_monitoring_v1_LiveTranscriptRoughDraftCompleted_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_events_monitoring_v1_EndRoughDraft_descriptor,
-        new java.lang.String[] { "RecordingId", });
-    internal_static_events_monitoring_v1_StartDiarizedRoughDraft_descriptor =
+        internal_static_events_monitoring_v1_LiveTranscriptRoughDraftCompleted_descriptor,
+        new java.lang.String[] { });
+    internal_static_events_monitoring_v1_RoughDraftCompleted_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_events_monitoring_v1_StartDiarizedRoughDraft_fieldAccessorTable = new
+    internal_static_events_monitoring_v1_RoughDraftCompleted_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_events_monitoring_v1_StartDiarizedRoughDraft_descriptor,
-        new java.lang.String[] { "RecordingId", "AudioLengthSeconds", });
-    internal_static_events_monitoring_v1_EndDiarizedRoughDraft_descriptor =
+        internal_static_events_monitoring_v1_RoughDraftCompleted_descriptor,
+        new java.lang.String[] { });
+    internal_static_events_monitoring_v1_RoughDraftWithSpeakersCompleted_descriptor =
       getDescriptor().getMessageTypes().get(3);
-    internal_static_events_monitoring_v1_EndDiarizedRoughDraft_fieldAccessorTable = new
+    internal_static_events_monitoring_v1_RoughDraftWithSpeakersCompleted_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_events_monitoring_v1_EndDiarizedRoughDraft_descriptor,
-        new java.lang.String[] { "RecordingId", });
+        internal_static_events_monitoring_v1_RoughDraftWithSpeakersCompleted_descriptor,
+        new java.lang.String[] { });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
