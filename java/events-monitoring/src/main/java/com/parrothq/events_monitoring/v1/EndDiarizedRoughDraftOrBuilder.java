@@ -3,8 +3,8 @@
 
 package com.parrothq.events_monitoring.v1;
 
-public interface StartRoughDraftOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:events_monitoring.v1.StartRoughDraft)
+public interface EndDiarizedRoughDraftOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:events_monitoring.v1.EndDiarizedRoughDraft)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -18,10 +18,4 @@ public interface StartRoughDraftOrBuilder extends
    */
   com.google.protobuf.ByteString
       getRecordingIdBytes();
-
-  /**
-   * <code>int32 audio_length_seconds = 2;</code>
-   * @return The audioLengthSeconds.
-   */
-  int getAudioLengthSeconds();
 }

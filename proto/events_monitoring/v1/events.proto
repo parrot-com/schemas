@@ -12,6 +12,7 @@ message Header {
 	string event_type = 1;
 	string correlation_id = 2;
 	google.protobuf.Timestamp timestamp = 3;
+	bool silent = 4;
 }
 
 message Event {

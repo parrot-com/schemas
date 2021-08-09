@@ -4,18 +4,18 @@
 package com.parrothq.events_monitoring.v1;
 
 /**
- * Protobuf type {@code events_monitoring.v1.StartRoughDraft}
+ * Protobuf type {@code events_monitoring.v1.StartDiarizedRoughDraft}
  */
-public final class StartRoughDraft extends
+public final class StartDiarizedRoughDraft extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:events_monitoring.v1.StartRoughDraft)
-    StartRoughDraftOrBuilder {
+    // @@protoc_insertion_point(message_implements:events_monitoring.v1.StartDiarizedRoughDraft)
+    StartDiarizedRoughDraftOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use StartRoughDraft.newBuilder() to construct.
-  private StartRoughDraft(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use StartDiarizedRoughDraft.newBuilder() to construct.
+  private StartDiarizedRoughDraft(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private StartRoughDraft() {
+  private StartDiarizedRoughDraft() {
     recordingId_ = "";
   }
 
@@ -23,7 +23,7 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new StartRoughDraft();
+    return new StartDiarizedRoughDraft();
   }
 
   @java.lang.Override
@@ -31,7 +31,7 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private StartRoughDraft(
+  private StartDiarizedRoughDraft(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -81,15 +81,15 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.parrothq.events_monitoring.v1.Expectations.internal_static_events_monitoring_v1_StartRoughDraft_descriptor;
+    return com.parrothq.events_monitoring.v1.Expectations.internal_static_events_monitoring_v1_StartDiarizedRoughDraft_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.parrothq.events_monitoring.v1.Expectations.internal_static_events_monitoring_v1_StartRoughDraft_fieldAccessorTable
+    return com.parrothq.events_monitoring.v1.Expectations.internal_static_events_monitoring_v1_StartDiarizedRoughDraft_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.parrothq.events_monitoring.v1.StartRoughDraft.class, com.parrothq.events_monitoring.v1.StartRoughDraft.Builder.class);
+            com.parrothq.events_monitoring.v1.StartDiarizedRoughDraft.class, com.parrothq.events_monitoring.v1.StartDiarizedRoughDraft.Builder.class);
   }
 
   public static final int RECORDING_ID_FIELD_NUMBER = 1;
@@ -187,10 +187,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.parrothq.events_monitoring.v1.StartRoughDraft)) {
+    if (!(obj instanceof com.parrothq.events_monitoring.v1.StartDiarizedRoughDraft)) {
       return super.equals(obj);
     }
-    com.parrothq.events_monitoring.v1.StartRoughDraft other = (com.parrothq.events_monitoring.v1.StartRoughDraft) obj;
+    com.parrothq.events_monitoring.v1.StartDiarizedRoughDraft other = (com.parrothq.events_monitoring.v1.StartDiarizedRoughDraft) obj;
 
     if (!getRecordingId()
         .equals(other.getRecordingId())) return false;
@@ -216,69 +216,69 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.parrothq.events_monitoring.v1.StartRoughDraft parseFrom(
+  public static com.parrothq.events_monitoring.v1.StartDiarizedRoughDraft parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.parrothq.events_monitoring.v1.StartRoughDraft parseFrom(
+  public static com.parrothq.events_monitoring.v1.StartDiarizedRoughDraft parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.parrothq.events_monitoring.v1.StartRoughDraft parseFrom(
+  public static com.parrothq.events_monitoring.v1.StartDiarizedRoughDraft parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.parrothq.events_monitoring.v1.StartRoughDraft parseFrom(
+  public static com.parrothq.events_monitoring.v1.StartDiarizedRoughDraft parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.parrothq.events_monitoring.v1.StartRoughDraft parseFrom(byte[] data)
+  public static com.parrothq.events_monitoring.v1.StartDiarizedRoughDraft parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.parrothq.events_monitoring.v1.StartRoughDraft parseFrom(
+  public static com.parrothq.events_monitoring.v1.StartDiarizedRoughDraft parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.parrothq.events_monitoring.v1.StartRoughDraft parseFrom(java.io.InputStream input)
+  public static com.parrothq.events_monitoring.v1.StartDiarizedRoughDraft parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.parrothq.events_monitoring.v1.StartRoughDraft parseFrom(
+  public static com.parrothq.events_monitoring.v1.StartDiarizedRoughDraft parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.parrothq.events_monitoring.v1.StartRoughDraft parseDelimitedFrom(java.io.InputStream input)
+  public static com.parrothq.events_monitoring.v1.StartDiarizedRoughDraft parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static com.parrothq.events_monitoring.v1.StartRoughDraft parseDelimitedFrom(
+  public static com.parrothq.events_monitoring.v1.StartDiarizedRoughDraft parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.parrothq.events_monitoring.v1.StartRoughDraft parseFrom(
+  public static com.parrothq.events_monitoring.v1.StartDiarizedRoughDraft parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.parrothq.events_monitoring.v1.StartRoughDraft parseFrom(
+  public static com.parrothq.events_monitoring.v1.StartDiarizedRoughDraft parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -291,7 +291,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.parrothq.events_monitoring.v1.StartRoughDraft prototype) {
+  public static Builder newBuilder(com.parrothq.events_monitoring.v1.StartDiarizedRoughDraft prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -307,26 +307,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code events_monitoring.v1.StartRoughDraft}
+   * Protobuf type {@code events_monitoring.v1.StartDiarizedRoughDraft}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:events_monitoring.v1.StartRoughDraft)
-      com.parrothq.events_monitoring.v1.StartRoughDraftOrBuilder {
+      // @@protoc_insertion_point(builder_implements:events_monitoring.v1.StartDiarizedRoughDraft)
+      com.parrothq.events_monitoring.v1.StartDiarizedRoughDraftOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.parrothq.events_monitoring.v1.Expectations.internal_static_events_monitoring_v1_StartRoughDraft_descriptor;
+      return com.parrothq.events_monitoring.v1.Expectations.internal_static_events_monitoring_v1_StartDiarizedRoughDraft_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.parrothq.events_monitoring.v1.Expectations.internal_static_events_monitoring_v1_StartRoughDraft_fieldAccessorTable
+      return com.parrothq.events_monitoring.v1.Expectations.internal_static_events_monitoring_v1_StartDiarizedRoughDraft_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.parrothq.events_monitoring.v1.StartRoughDraft.class, com.parrothq.events_monitoring.v1.StartRoughDraft.Builder.class);
+              com.parrothq.events_monitoring.v1.StartDiarizedRoughDraft.class, com.parrothq.events_monitoring.v1.StartDiarizedRoughDraft.Builder.class);
     }
 
-    // Construct using com.parrothq.events_monitoring.v1.StartRoughDraft.newBuilder()
+    // Construct using com.parrothq.events_monitoring.v1.StartDiarizedRoughDraft.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -354,17 +354,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.parrothq.events_monitoring.v1.Expectations.internal_static_events_monitoring_v1_StartRoughDraft_descriptor;
+      return com.parrothq.events_monitoring.v1.Expectations.internal_static_events_monitoring_v1_StartDiarizedRoughDraft_descriptor;
     }
 
     @java.lang.Override
-    public com.parrothq.events_monitoring.v1.StartRoughDraft getDefaultInstanceForType() {
-      return com.parrothq.events_monitoring.v1.StartRoughDraft.getDefaultInstance();
+    public com.parrothq.events_monitoring.v1.StartDiarizedRoughDraft getDefaultInstanceForType() {
+      return com.parrothq.events_monitoring.v1.StartDiarizedRoughDraft.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.parrothq.events_monitoring.v1.StartRoughDraft build() {
-      com.parrothq.events_monitoring.v1.StartRoughDraft result = buildPartial();
+    public com.parrothq.events_monitoring.v1.StartDiarizedRoughDraft build() {
+      com.parrothq.events_monitoring.v1.StartDiarizedRoughDraft result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -372,8 +372,8 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.parrothq.events_monitoring.v1.StartRoughDraft buildPartial() {
-      com.parrothq.events_monitoring.v1.StartRoughDraft result = new com.parrothq.events_monitoring.v1.StartRoughDraft(this);
+    public com.parrothq.events_monitoring.v1.StartDiarizedRoughDraft buildPartial() {
+      com.parrothq.events_monitoring.v1.StartDiarizedRoughDraft result = new com.parrothq.events_monitoring.v1.StartDiarizedRoughDraft(this);
       result.recordingId_ = recordingId_;
       result.audioLengthSeconds_ = audioLengthSeconds_;
       onBuilt();
@@ -414,16 +414,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.parrothq.events_monitoring.v1.StartRoughDraft) {
-        return mergeFrom((com.parrothq.events_monitoring.v1.StartRoughDraft)other);
+      if (other instanceof com.parrothq.events_monitoring.v1.StartDiarizedRoughDraft) {
+        return mergeFrom((com.parrothq.events_monitoring.v1.StartDiarizedRoughDraft)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.parrothq.events_monitoring.v1.StartRoughDraft other) {
-      if (other == com.parrothq.events_monitoring.v1.StartRoughDraft.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.parrothq.events_monitoring.v1.StartDiarizedRoughDraft other) {
+      if (other == com.parrothq.events_monitoring.v1.StartDiarizedRoughDraft.getDefaultInstance()) return this;
       if (!other.getRecordingId().isEmpty()) {
         recordingId_ = other.recordingId_;
         onChanged();
@@ -446,11 +446,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.parrothq.events_monitoring.v1.StartRoughDraft parsedMessage = null;
+      com.parrothq.events_monitoring.v1.StartDiarizedRoughDraft parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.parrothq.events_monitoring.v1.StartRoughDraft) e.getUnfinishedMessage();
+        parsedMessage = (com.parrothq.events_monitoring.v1.StartDiarizedRoughDraft) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
         if (parsedMessage != null) {
@@ -579,41 +579,41 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:events_monitoring.v1.StartRoughDraft)
+    // @@protoc_insertion_point(builder_scope:events_monitoring.v1.StartDiarizedRoughDraft)
   }
 
-  // @@protoc_insertion_point(class_scope:events_monitoring.v1.StartRoughDraft)
-  private static final com.parrothq.events_monitoring.v1.StartRoughDraft DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:events_monitoring.v1.StartDiarizedRoughDraft)
+  private static final com.parrothq.events_monitoring.v1.StartDiarizedRoughDraft DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.parrothq.events_monitoring.v1.StartRoughDraft();
+    DEFAULT_INSTANCE = new com.parrothq.events_monitoring.v1.StartDiarizedRoughDraft();
   }
 
-  public static com.parrothq.events_monitoring.v1.StartRoughDraft getDefaultInstance() {
+  public static com.parrothq.events_monitoring.v1.StartDiarizedRoughDraft getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<StartRoughDraft>
-      PARSER = new com.google.protobuf.AbstractParser<StartRoughDraft>() {
+  private static final com.google.protobuf.Parser<StartDiarizedRoughDraft>
+      PARSER = new com.google.protobuf.AbstractParser<StartDiarizedRoughDraft>() {
     @java.lang.Override
-    public StartRoughDraft parsePartialFrom(
+    public StartDiarizedRoughDraft parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new StartRoughDraft(input, extensionRegistry);
+      return new StartDiarizedRoughDraft(input, extensionRegistry);
     }
   };
 
-  public static com.google.protobuf.Parser<StartRoughDraft> parser() {
+  public static com.google.protobuf.Parser<StartDiarizedRoughDraft> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<StartRoughDraft> getParserForType() {
+  public com.google.protobuf.Parser<StartDiarizedRoughDraft> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.parrothq.events_monitoring.v1.StartRoughDraft getDefaultInstanceForType() {
+  public com.parrothq.events_monitoring.v1.StartDiarizedRoughDraft getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

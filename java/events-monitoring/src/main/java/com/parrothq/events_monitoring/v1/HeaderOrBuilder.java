@@ -45,4 +45,10 @@ public interface HeaderOrBuilder extends
    * <code>.google.protobuf.Timestamp timestamp = 3;</code>
    */
   com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder();
+
+  /**
+   * <code>bool silent = 4;</code>
+   * @return The silent.
+   */
+  boolean getSilent();
 }

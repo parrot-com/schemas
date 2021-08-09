@@ -3,8 +3,8 @@
 
 package com.parrothq.events_monitoring.v1;
 
-public interface StartRoughDraftOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:events_monitoring.v1.StartRoughDraft)
+public interface StartDiarizedRoughDraftOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:events_monitoring.v1.StartDiarizedRoughDraft)
     com.google.protobuf.MessageOrBuilder {
 
   /**

@@ -24,6 +24,16 @@ public final class Expectations {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_events_monitoring_v1_EndRoughDraft_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_events_monitoring_v1_StartDiarizedRoughDraft_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_events_monitoring_v1_StartDiarizedRoughDraft_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_events_monitoring_v1_EndDiarizedRoughDraft_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_events_monitoring_v1_EndDiarizedRoughDraft_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -34,11 +44,14 @@ public final class Expectations {
   static {
     java.lang.String[] descriptorData = {
       "\n\'events_monitoring/v1/expectations.prot" +
-      "o\022\024events_monitoring.v1\"=\n\017StartRoughDra" +
-      "ft\022\024\n\014recording_id\030\001 \001(\t\022\024\n\014audio_length" +
-      "\030\002 \001(\005\"%\n\rEndRoughDraft\022\024\n\014recording_id\030" +
-      "\001 \001(\tB%\n!com.parrothq.events_monitoring." +
-      "v1P\001b\006proto3"
+      "o\022\024events_monitoring.v1\"E\n\017StartRoughDra" +
+      "ft\022\024\n\014recording_id\030\001 \001(\t\022\034\n\024audio_length" +
+      "_seconds\030\002 \001(\005\"%\n\rEndRoughDraft\022\024\n\014recor" +
+      "ding_id\030\001 \001(\t\"M\n\027StartDiarizedRoughDraft" +
+      "\022\024\n\014recording_id\030\001 \001(\t\022\034\n\024audio_length_s" +
+      "econds\030\002 \001(\005\"-\n\025EndDiarizedRoughDraft\022\024\n" +
+      "\014recording_id\030\001 \001(\tB%\n!com.parrothq.even" +
+      "ts_monitoring.v1P\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -49,12 +62,24 @@ public final class Expectations {
     internal_static_events_monitoring_v1_StartRoughDraft_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_events_monitoring_v1_StartRoughDraft_descriptor,
-        new java.lang.String[] { "RecordingId", "AudioLength", });
+        new java.lang.String[] { "RecordingId", "AudioLengthSeconds", });
     internal_static_events_monitoring_v1_EndRoughDraft_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_events_monitoring_v1_EndRoughDraft_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_events_monitoring_v1_EndRoughDraft_descriptor,
+        new java.lang.String[] { "RecordingId", });
+    internal_static_events_monitoring_v1_StartDiarizedRoughDraft_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_events_monitoring_v1_StartDiarizedRoughDraft_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_events_monitoring_v1_StartDiarizedRoughDraft_descriptor,
+        new java.lang.String[] { "RecordingId", "AudioLengthSeconds", });
+    internal_static_events_monitoring_v1_EndDiarizedRoughDraft_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_events_monitoring_v1_EndDiarizedRoughDraft_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_events_monitoring_v1_EndDiarizedRoughDraft_descriptor,
         new java.lang.String[] { "RecordingId", });
   }
 

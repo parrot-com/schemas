@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'\n!com.parrothq.events_monitoring.v1P\001',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\'events_monitoring/v1/expectations.proto\x12\x14\x65vents_monitoring.v1\"=\n\x0fStartRoughDraft\x12\x14\n\x0crecording_id\x18\x01 \x01(\t\x12\x14\n\x0c\x61udio_length\x18\x02 \x01(\x05\"%\n\rEndRoughDraft\x12\x14\n\x0crecording_id\x18\x01 \x01(\tB%\n!com.parrothq.events_monitoring.v1P\x01\x62\x06proto3'
+  serialized_pb=b'\n\'events_monitoring/v1/expectations.proto\x12\x14\x65vents_monitoring.v1\"E\n\x0fStartRoughDraft\x12\x14\n\x0crecording_id\x18\x01 \x01(\t\x12\x1c\n\x14\x61udio_length_seconds\x18\x02 \x01(\x05\"%\n\rEndRoughDraft\x12\x14\n\x0crecording_id\x18\x01 \x01(\t\"M\n\x17StartDiarizedRoughDraft\x12\x14\n\x0crecording_id\x18\x01 \x01(\t\x12\x1c\n\x14\x61udio_length_seconds\x18\x02 \x01(\x05\"-\n\x15\x45ndDiarizedRoughDraft\x12\x14\n\x0crecording_id\x18\x01 \x01(\tB%\n!com.parrothq.events_monitoring.v1P\x01\x62\x06proto3'
 )
 
 
@@ -41,7 +41,7 @@ _STARTROUGHDRAFT = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='audio_length', full_name='events_monitoring.v1.StartRoughDraft.audio_length', index=1,
+      name='audio_length_seconds', full_name='events_monitoring.v1.StartRoughDraft.audio_length_seconds', index=1,
       number=2, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -60,7 +60,7 @@ _STARTROUGHDRAFT = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=65,
-  serialized_end=126,
+  serialized_end=134,
 )
 
 
@@ -91,12 +91,85 @@ _ENDROUGHDRAFT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=128,
-  serialized_end=165,
+  serialized_start=136,
+  serialized_end=173,
+)
+
+
+_STARTDIARIZEDROUGHDRAFT = _descriptor.Descriptor(
+  name='StartDiarizedRoughDraft',
+  full_name='events_monitoring.v1.StartDiarizedRoughDraft',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='recording_id', full_name='events_monitoring.v1.StartDiarizedRoughDraft.recording_id', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='audio_length_seconds', full_name='events_monitoring.v1.StartDiarizedRoughDraft.audio_length_seconds', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=175,
+  serialized_end=252,
+)
+
+
+_ENDDIARIZEDROUGHDRAFT = _descriptor.Descriptor(
+  name='EndDiarizedRoughDraft',
+  full_name='events_monitoring.v1.EndDiarizedRoughDraft',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='recording_id', full_name='events_monitoring.v1.EndDiarizedRoughDraft.recording_id', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=254,
+  serialized_end=299,
 )
 
 DESCRIPTOR.message_types_by_name['StartRoughDraft'] = _STARTROUGHDRAFT
 DESCRIPTOR.message_types_by_name['EndRoughDraft'] = _ENDROUGHDRAFT
+DESCRIPTOR.message_types_by_name['StartDiarizedRoughDraft'] = _STARTDIARIZEDROUGHDRAFT
+DESCRIPTOR.message_types_by_name['EndDiarizedRoughDraft'] = _ENDDIARIZEDROUGHDRAFT
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 StartRoughDraft = _reflection.GeneratedProtocolMessageType('StartRoughDraft', (_message.Message,), {
@@ -112,6 +185,20 @@ EndRoughDraft = _reflection.GeneratedProtocolMessageType('EndRoughDraft', (_mess
   # @@protoc_insertion_point(class_scope:events_monitoring.v1.EndRoughDraft)
   })
 _sym_db.RegisterMessage(EndRoughDraft)
+
+StartDiarizedRoughDraft = _reflection.GeneratedProtocolMessageType('StartDiarizedRoughDraft', (_message.Message,), {
+  'DESCRIPTOR' : _STARTDIARIZEDROUGHDRAFT,
+  '__module__' : 'events_monitoring.v1.expectations_pb2'
+  # @@protoc_insertion_point(class_scope:events_monitoring.v1.StartDiarizedRoughDraft)
+  })
+_sym_db.RegisterMessage(StartDiarizedRoughDraft)
+
+EndDiarizedRoughDraft = _reflection.GeneratedProtocolMessageType('EndDiarizedRoughDraft', (_message.Message,), {
+  'DESCRIPTOR' : _ENDDIARIZEDROUGHDRAFT,
+  '__module__' : 'events_monitoring.v1.expectations_pb2'
+  # @@protoc_insertion_point(class_scope:events_monitoring.v1.EndDiarizedRoughDraft)
+  })
+_sym_db.RegisterMessage(EndDiarizedRoughDraft)
 
 
 DESCRIPTOR._options = None

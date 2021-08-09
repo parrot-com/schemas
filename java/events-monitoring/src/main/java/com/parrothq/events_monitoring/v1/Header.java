@@ -75,6 +75,11 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 32: {
+
+            silent_ = input.readBool();
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -209,6 +214,17 @@ private static final long serialVersionUID = 0L;
     return getTimestamp();
   }
 
+  public static final int SILENT_FIELD_NUMBER = 4;
+  private boolean silent_;
+  /**
+   * <code>bool silent = 4;</code>
+   * @return The silent.
+   */
+  @java.lang.Override
+  public boolean getSilent() {
+    return silent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -232,6 +248,9 @@ private static final long serialVersionUID = 0L;
     if (timestamp_ != null) {
       output.writeMessage(3, getTimestamp());
     }
+    if (silent_ != false) {
+      output.writeBool(4, silent_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -250,6 +269,10 @@ private static final long serialVersionUID = 0L;
     if (timestamp_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getTimestamp());
+    }
+    if (silent_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(4, silent_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -275,6 +298,8 @@ private static final long serialVersionUID = 0L;
       if (!getTimestamp()
           .equals(other.getTimestamp())) return false;
     }
+    if (getSilent()
+        != other.getSilent()) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -294,6 +319,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + TIMESTAMP_FIELD_NUMBER;
       hash = (53 * hash) + getTimestamp().hashCode();
     }
+    hash = (37 * hash) + SILENT_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getSilent());
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -437,6 +465,8 @@ private static final long serialVersionUID = 0L;
         timestamp_ = null;
         timestampBuilder_ = null;
       }
+      silent_ = false;
+
       return this;
     }
 
@@ -470,6 +500,7 @@ private static final long serialVersionUID = 0L;
       } else {
         result.timestamp_ = timestampBuilder_.build();
       }
+      result.silent_ = silent_;
       onBuilt();
       return result;
     }
@@ -528,6 +559,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasTimestamp()) {
         mergeTimestamp(other.getTimestamp());
+      }
+      if (other.getSilent() != false) {
+        setSilent(other.getSilent());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -827,6 +861,37 @@ private static final long serialVersionUID = 0L;
         timestamp_ = null;
       }
       return timestampBuilder_;
+    }
+
+    private boolean silent_ ;
+    /**
+     * <code>bool silent = 4;</code>
+     * @return The silent.
+     */
+    @java.lang.Override
+    public boolean getSilent() {
+      return silent_;
+    }
+    /**
+     * <code>bool silent = 4;</code>
+     * @param value The silent to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSilent(boolean value) {
+      
+      silent_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>bool silent = 4;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearSilent() {
+      
+      silent_ = false;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

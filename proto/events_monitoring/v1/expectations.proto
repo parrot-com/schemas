@@ -7,9 +7,18 @@ option java_package = "com.parrothq.events_monitoring.v1";
 
 message StartRoughDraft {
   string recording_id = 1;
-  int32 audio_length = 2;
+  int32 audio_length_seconds = 2;
 }
 
 message EndRoughDraft {
+  string recording_id = 1;
+}
+
+message StartDiarizedRoughDraft {
+  string recording_id = 1;
+  int32 audio_length_seconds = 2;
+}
+
+message EndDiarizedRoughDraft {
   string recording_id = 1;
 }
