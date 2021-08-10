@@ -49,10 +49,10 @@ public final class Expectations {
       "\030\001 \001(\005\0225\n\006source\030\002 \001(\0162%.events_monitori" +
       "ng.v1.RecordingSource\"#\n!LiveTranscriptR" +
       "oughDraftCompleted\"\025\n\023RoughDraftComplete" +
-      "d\"!\n\037RoughDraftWithSpeakersCompleted*K\n\017" +
+      "d\"!\n\037RoughDraftWithSpeakersCompleted*F\n\017" +
       "RecordingSource\022\034\n\030RECORDING_SOURCE_UNKN" +
-      "OWN\020\000\022\n\n\006UPLOAD\020\001\022\016\n\nDEPOSITION\020\002B%\n!com" +
-      ".parrothq.events_monitoring.v1P\001b\006proto3"
+      "OWN\020\000\022\n\n\006UPLOAD\020\001\022\t\n\005EVENT\020\002B%\n!com.parr" +
+      "othq.events_monitoring.v1P\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -17,9 +17,9 @@ public enum RecordingSource
    */
   UPLOAD(1),
   /**
-   * <code>DEPOSITION = 2;</code>
+   * <code>EVENT = 2;</code>
    */
-  DEPOSITION(2),
+  EVENT(2),
   UNRECOGNIZED(-1),
   ;
 
@@ -32,9 +32,9 @@ public enum RecordingSource
    */
   public static final int UPLOAD_VALUE = 1;
   /**
-   * <code>DEPOSITION = 2;</code>
+   * <code>EVENT = 2;</code>
    */
-  public static final int DEPOSITION_VALUE = 2;
+  public static final int EVENT_VALUE = 2;
 
 
   public final int getNumber() {
@@ -63,7 +63,7 @@ public enum RecordingSource
     switch (value) {
       case 0: return RECORDING_SOURCE_UNKNOWN;
       case 1: return UPLOAD;
-      case 2: return DEPOSITION;
+      case 2: return EVENT;
       default: return null;
     }
   }

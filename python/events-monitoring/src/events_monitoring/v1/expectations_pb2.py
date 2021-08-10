@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'\n!com.parrothq.events_monitoring.v1P\001',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\'events_monitoring/v1/expectations.proto\x12\x14\x65vents_monitoring.v1\"t\n\x1dRecordingPreprocessingStarted\x12\x1c\n\x14\x61udio_length_seconds\x18\x01 \x01(\x05\x12\x35\n\x06source\x18\x02 \x01(\x0e\x32%.events_monitoring.v1.RecordingSource\"#\n!LiveTranscriptRoughDraftCompleted\"\x15\n\x13RoughDraftCompleted\"!\n\x1fRoughDraftWithSpeakersCompleted*K\n\x0fRecordingSource\x12\x1c\n\x18RECORDING_SOURCE_UNKNOWN\x10\x00\x12\n\n\x06UPLOAD\x10\x01\x12\x0e\n\nDEPOSITION\x10\x02\x42%\n!com.parrothq.events_monitoring.v1P\x01\x62\x06proto3'
+  serialized_pb=b'\n\'events_monitoring/v1/expectations.proto\x12\x14\x65vents_monitoring.v1\"t\n\x1dRecordingPreprocessingStarted\x12\x1c\n\x14\x61udio_length_seconds\x18\x01 \x01(\x05\x12\x35\n\x06source\x18\x02 \x01(\x0e\x32%.events_monitoring.v1.RecordingSource\"#\n!LiveTranscriptRoughDraftCompleted\"\x15\n\x13RoughDraftCompleted\"!\n\x1fRoughDraftWithSpeakersCompleted*F\n\x0fRecordingSource\x12\x1c\n\x18RECORDING_SOURCE_UNKNOWN\x10\x00\x12\n\n\x06UPLOAD\x10\x01\x12\t\n\x05\x45VENT\x10\x02\x42%\n!com.parrothq.events_monitoring.v1P\x01\x62\x06proto3'
 )
 
 _RECORDINGSOURCE = _descriptor.EnumDescriptor(
@@ -41,7 +41,7 @@ _RECORDINGSOURCE = _descriptor.EnumDescriptor(
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='DEPOSITION', index=2, number=2,
+      name='EVENT', index=2, number=2,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
@@ -49,14 +49,14 @@ _RECORDINGSOURCE = _descriptor.EnumDescriptor(
   containing_type=None,
   serialized_options=None,
   serialized_start=278,
-  serialized_end=353,
+  serialized_end=348,
 )
 _sym_db.RegisterEnumDescriptor(_RECORDINGSOURCE)
 
 RecordingSource = enum_type_wrapper.EnumTypeWrapper(_RECORDINGSOURCE)
 RECORDING_SOURCE_UNKNOWN = 0
 UPLOAD = 1
-DEPOSITION = 2
+EVENT = 2
 
 
 
