@@ -5,20 +5,24 @@ package events_monitoring.v1;
 option java_multiple_files = true;
 option java_package = "com.parrothq.events_monitoring.v1";
 
-message StartRoughDraft {
-  string recording_id = 1;
-  int32 audio_length_seconds = 2;
+
+enum RecordingSource {
+  RECORDING_SOURCE_UNKNOWN = 0;
+  UPLOAD = 1;
+  DEPOSITION = 2;
 }
 
-message EndRoughDraft {
-  string recording_id = 1;
+message RecordingPreprocessingStarted {
+  int32 audio_length_seconds = 1;
+  RecordingSource source = 2;
 }
 
-message StartDiarizedRoughDraft {
-  string recording_id = 1;
-  int32 audio_length_seconds = 2;
+message LiveTranscriptRoughDraftCompleted {
 }
 
-message EndDiarizedRoughDraft {
-  string recording_id = 1;
+message RoughDraftCompleted {
 }
+
+message RoughDraftWithSpeakersCompleted {
+}
+
