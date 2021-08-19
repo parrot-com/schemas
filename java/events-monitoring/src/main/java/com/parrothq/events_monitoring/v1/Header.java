@@ -115,6 +115,10 @@ private static final long serialVersionUID = 0L;
   public static final int EVENT_TYPE_FIELD_NUMBER = 1;
   private volatile java.lang.Object eventType_;
   /**
+   * <pre>
+   * Type of the event in spec. Used for serializing.
+   * </pre>
+   *
    * <code>string event_type = 1;</code>
    * @return The eventType.
    */
@@ -132,6 +136,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * Type of the event in spec. Used for serializing.
+   * </pre>
+   *
    * <code>string event_type = 1;</code>
    * @return The bytes for eventType.
    */
@@ -153,6 +161,10 @@ private static final long serialVersionUID = 0L;
   public static final int CORRELATION_ID_FIELD_NUMBER = 2;
   private volatile java.lang.Object correlationId_;
   /**
+   * <pre>
+   * Unique identifier value that allow reference to a particular event chain.
+   * </pre>
+   *
    * <code>string correlation_id = 2;</code>
    * @return The correlationId.
    */
@@ -170,6 +182,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * Unique identifier value that allow reference to a particular event chain.
+   * </pre>
+   *
    * <code>string correlation_id = 2;</code>
    * @return The bytes for correlationId.
    */
@@ -191,6 +207,10 @@ private static final long serialVersionUID = 0L;
   public static final int TIMESTAMP_FIELD_NUMBER = 3;
   private com.google.protobuf.Timestamp timestamp_;
   /**
+   * <pre>
+   * Time of the event.
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp timestamp = 3;</code>
    * @return Whether the timestamp field is set.
    */
@@ -199,6 +219,10 @@ private static final long serialVersionUID = 0L;
     return timestamp_ != null;
   }
   /**
+   * <pre>
+   * Time of the event.
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp timestamp = 3;</code>
    * @return The timestamp.
    */
@@ -207,6 +231,10 @@ private static final long serialVersionUID = 0L;
     return timestamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timestamp_;
   }
   /**
+   * <pre>
+   * Time of the event.
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp timestamp = 3;</code>
    */
   @java.lang.Override
@@ -217,6 +245,10 @@ private static final long serialVersionUID = 0L;
   public static final int SILENT_FIELD_NUMBER = 4;
   private boolean silent_;
   /**
+   * <pre>
+   * Silent events do NOT trigger notifications. Useful for newly added (untested) expectations.
+   * </pre>
+   *
    * <code>bool silent = 4;</code>
    * @return The silent.
    */
@@ -594,6 +626,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object eventType_ = "";
     /**
+     * <pre>
+     * Type of the event in spec. Used for serializing.
+     * </pre>
+     *
      * <code>string event_type = 1;</code>
      * @return The eventType.
      */
@@ -610,6 +646,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Type of the event in spec. Used for serializing.
+     * </pre>
+     *
      * <code>string event_type = 1;</code>
      * @return The bytes for eventType.
      */
@@ -627,6 +667,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Type of the event in spec. Used for serializing.
+     * </pre>
+     *
      * <code>string event_type = 1;</code>
      * @param value The eventType to set.
      * @return This builder for chaining.
@@ -642,6 +686,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Type of the event in spec. Used for serializing.
+     * </pre>
+     *
      * <code>string event_type = 1;</code>
      * @return This builder for chaining.
      */
@@ -652,6 +700,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Type of the event in spec. Used for serializing.
+     * </pre>
+     *
      * <code>string event_type = 1;</code>
      * @param value The bytes for eventType to set.
      * @return This builder for chaining.
@@ -670,6 +722,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object correlationId_ = "";
     /**
+     * <pre>
+     * Unique identifier value that allow reference to a particular event chain.
+     * </pre>
+     *
      * <code>string correlation_id = 2;</code>
      * @return The correlationId.
      */
@@ -686,6 +742,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Unique identifier value that allow reference to a particular event chain.
+     * </pre>
+     *
      * <code>string correlation_id = 2;</code>
      * @return The bytes for correlationId.
      */
@@ -703,6 +763,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Unique identifier value that allow reference to a particular event chain.
+     * </pre>
+     *
      * <code>string correlation_id = 2;</code>
      * @param value The correlationId to set.
      * @return This builder for chaining.
@@ -718,6 +782,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Unique identifier value that allow reference to a particular event chain.
+     * </pre>
+     *
      * <code>string correlation_id = 2;</code>
      * @return This builder for chaining.
      */
@@ -728,6 +796,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Unique identifier value that allow reference to a particular event chain.
+     * </pre>
+     *
      * <code>string correlation_id = 2;</code>
      * @param value The bytes for correlationId to set.
      * @return This builder for chaining.
@@ -748,6 +820,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> timestampBuilder_;
     /**
+     * <pre>
+     * Time of the event.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp timestamp = 3;</code>
      * @return Whether the timestamp field is set.
      */
@@ -755,6 +831,10 @@ private static final long serialVersionUID = 0L;
       return timestampBuilder_ != null || timestamp_ != null;
     }
     /**
+     * <pre>
+     * Time of the event.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp timestamp = 3;</code>
      * @return The timestamp.
      */
@@ -766,6 +846,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Time of the event.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp timestamp = 3;</code>
      */
     public Builder setTimestamp(com.google.protobuf.Timestamp value) {
@@ -782,6 +866,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Time of the event.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp timestamp = 3;</code>
      */
     public Builder setTimestamp(
@@ -796,6 +884,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Time of the event.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp timestamp = 3;</code>
      */
     public Builder mergeTimestamp(com.google.protobuf.Timestamp value) {
@@ -814,6 +906,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Time of the event.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp timestamp = 3;</code>
      */
     public Builder clearTimestamp() {
@@ -828,6 +924,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Time of the event.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp timestamp = 3;</code>
      */
     public com.google.protobuf.Timestamp.Builder getTimestampBuilder() {
@@ -836,6 +936,10 @@ private static final long serialVersionUID = 0L;
       return getTimestampFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Time of the event.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp timestamp = 3;</code>
      */
     public com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder() {
@@ -847,6 +951,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Time of the event.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp timestamp = 3;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -865,6 +973,10 @@ private static final long serialVersionUID = 0L;
 
     private boolean silent_ ;
     /**
+     * <pre>
+     * Silent events do NOT trigger notifications. Useful for newly added (untested) expectations.
+     * </pre>
+     *
      * <code>bool silent = 4;</code>
      * @return The silent.
      */
@@ -873,6 +985,10 @@ private static final long serialVersionUID = 0L;
       return silent_;
     }
     /**
+     * <pre>
+     * Silent events do NOT trigger notifications. Useful for newly added (untested) expectations.
+     * </pre>
+     *
      * <code>bool silent = 4;</code>
      * @param value The silent to set.
      * @return This builder for chaining.
@@ -884,6 +1000,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Silent events do NOT trigger notifications. Useful for newly added (untested) expectations.
+     * </pre>
+     *
      * <code>bool silent = 4;</code>
      * @return This builder for chaining.
      */

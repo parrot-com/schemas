@@ -23,4 +23,15 @@ public interface RecordingPreprocessingStartedOrBuilder extends
    * @return The source.
    */
   com.parrothq.events_monitoring.v1.RecordingSource getSource();
+
+  /**
+   * <code>.events_monitoring.v1.RecordingType type = 3;</code>
+   * @return The enum numeric value on the wire for type.
+   */
+  int getTypeValue();
+  /**
+   * <code>.events_monitoring.v1.RecordingType type = 3;</code>
+   * @return The type.
+   */
+  com.parrothq.events_monitoring.v1.RecordingType getType();
 }

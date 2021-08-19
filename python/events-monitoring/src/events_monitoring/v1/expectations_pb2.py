@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'\n!com.parrothq.events_monitoring.v1P\001',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\'events_monitoring/v1/expectations.proto\x12\x14\x65vents_monitoring.v1\"t\n\x1dRecordingPreprocessingStarted\x12\x1c\n\x14\x61udio_length_seconds\x18\x01 \x01(\x05\x12\x35\n\x06source\x18\x02 \x01(\x0e\x32%.events_monitoring.v1.RecordingSource\"#\n!LiveTranscriptRoughDraftCompleted\"\x15\n\x13RoughDraftCompleted\"!\n\x1fRoughDraftWithSpeakersCompleted*F\n\x0fRecordingSource\x12\x1c\n\x18RECORDING_SOURCE_UNKNOWN\x10\x00\x12\n\n\x06UPLOAD\x10\x01\x12\t\n\x05\x45VENT\x10\x02\x42%\n!com.parrothq.events_monitoring.v1P\x01\x62\x06proto3'
+  serialized_pb=b'\n\'events_monitoring/v1/expectations.proto\x12\x14\x65vents_monitoring.v1\"\xa7\x01\n\x1dRecordingPreprocessingStarted\x12\x1c\n\x14\x61udio_length_seconds\x18\x01 \x01(\x05\x12\x35\n\x06source\x18\x02 \x01(\x0e\x32%.events_monitoring.v1.RecordingSource\x12\x31\n\x04type\x18\x03 \x01(\x0e\x32#.events_monitoring.v1.RecordingType\"#\n!LiveTranscriptRoughDraftCompleted\"\x15\n\x13RoughDraftCompleted\"!\n\x1fRoughDraftWithSpeakersCompleted*F\n\x0fRecordingSource\x12\x1c\n\x18RECORDING_SOURCE_UNKNOWN\x10\x00\x12\n\n\x06UPLOAD\x10\x01\x12\t\n\x05\x45VENT\x10\x02*F\n\rRecordingType\x12\x1a\n\x16RECORDING_TYPE_UNKNOWN\x10\x00\x12\r\n\tRESERVOIR\x10\x01\x12\n\n\x06\x43LIENT\x10\x02\x42%\n!com.parrothq.events_monitoring.v1P\x01\x62\x06proto3'
 )
 
 _RECORDINGSOURCE = _descriptor.EnumDescriptor(
@@ -48,15 +48,49 @@ _RECORDINGSOURCE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=278,
-  serialized_end=348,
+  serialized_start=330,
+  serialized_end=400,
 )
 _sym_db.RegisterEnumDescriptor(_RECORDINGSOURCE)
 
 RecordingSource = enum_type_wrapper.EnumTypeWrapper(_RECORDINGSOURCE)
+_RECORDINGTYPE = _descriptor.EnumDescriptor(
+  name='RecordingType',
+  full_name='events_monitoring.v1.RecordingType',
+  filename=None,
+  file=DESCRIPTOR,
+  create_key=_descriptor._internal_create_key,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='RECORDING_TYPE_UNKNOWN', index=0, number=0,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='RESERVOIR', index=1, number=1,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='CLIENT', index=2, number=2,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=402,
+  serialized_end=472,
+)
+_sym_db.RegisterEnumDescriptor(_RECORDINGTYPE)
+
+RecordingType = enum_type_wrapper.EnumTypeWrapper(_RECORDINGTYPE)
 RECORDING_SOURCE_UNKNOWN = 0
 UPLOAD = 1
 EVENT = 2
+RECORDING_TYPE_UNKNOWN = 0
+RESERVOIR = 1
+CLIENT = 2
 
 
 
@@ -82,6 +116,13 @@ _RECORDINGPREPROCESSINGSTARTED = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='type', full_name='events_monitoring.v1.RecordingPreprocessingStarted.type', index=2,
+      number=3, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -94,8 +135,8 @@ _RECORDINGPREPROCESSINGSTARTED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=65,
-  serialized_end=181,
+  serialized_start=66,
+  serialized_end=233,
 )
 
 
@@ -119,8 +160,8 @@ _LIVETRANSCRIPTROUGHDRAFTCOMPLETED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=183,
-  serialized_end=218,
+  serialized_start=235,
+  serialized_end=270,
 )
 
 
@@ -144,8 +185,8 @@ _ROUGHDRAFTCOMPLETED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=220,
-  serialized_end=241,
+  serialized_start=272,
+  serialized_end=293,
 )
 
 
@@ -169,16 +210,18 @@ _ROUGHDRAFTWITHSPEAKERSCOMPLETED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=243,
-  serialized_end=276,
+  serialized_start=295,
+  serialized_end=328,
 )
 
 _RECORDINGPREPROCESSINGSTARTED.fields_by_name['source'].enum_type = _RECORDINGSOURCE
+_RECORDINGPREPROCESSINGSTARTED.fields_by_name['type'].enum_type = _RECORDINGTYPE
 DESCRIPTOR.message_types_by_name['RecordingPreprocessingStarted'] = _RECORDINGPREPROCESSINGSTARTED
 DESCRIPTOR.message_types_by_name['LiveTranscriptRoughDraftCompleted'] = _LIVETRANSCRIPTROUGHDRAFTCOMPLETED
 DESCRIPTOR.message_types_by_name['RoughDraftCompleted'] = _ROUGHDRAFTCOMPLETED
 DESCRIPTOR.message_types_by_name['RoughDraftWithSpeakersCompleted'] = _ROUGHDRAFTWITHSPEAKERSCOMPLETED
 DESCRIPTOR.enum_types_by_name['RecordingSource'] = _RECORDINGSOURCE
+DESCRIPTOR.enum_types_by_name['RecordingType'] = _RECORDINGTYPE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 RecordingPreprocessingStarted = _reflection.GeneratedProtocolMessageType('RecordingPreprocessingStarted', (_message.Message,), {

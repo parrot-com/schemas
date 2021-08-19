@@ -44,15 +44,18 @@ public final class Expectations {
   static {
     java.lang.String[] descriptorData = {
       "\n\'events_monitoring/v1/expectations.prot" +
-      "o\022\024events_monitoring.v1\"t\n\035RecordingPrep" +
-      "rocessingStarted\022\034\n\024audio_length_seconds" +
-      "\030\001 \001(\005\0225\n\006source\030\002 \001(\0162%.events_monitori" +
-      "ng.v1.RecordingSource\"#\n!LiveTranscriptR" +
-      "oughDraftCompleted\"\025\n\023RoughDraftComplete" +
-      "d\"!\n\037RoughDraftWithSpeakersCompleted*F\n\017" +
-      "RecordingSource\022\034\n\030RECORDING_SOURCE_UNKN" +
-      "OWN\020\000\022\n\n\006UPLOAD\020\001\022\t\n\005EVENT\020\002B%\n!com.parr" +
-      "othq.events_monitoring.v1P\001b\006proto3"
+      "o\022\024events_monitoring.v1\"\247\001\n\035RecordingPre" +
+      "processingStarted\022\034\n\024audio_length_second" +
+      "s\030\001 \001(\005\0225\n\006source\030\002 \001(\0162%.events_monitor" +
+      "ing.v1.RecordingSource\0221\n\004type\030\003 \001(\0162#.e" +
+      "vents_monitoring.v1.RecordingType\"#\n!Liv" +
+      "eTranscriptRoughDraftCompleted\"\025\n\023RoughD" +
+      "raftCompleted\"!\n\037RoughDraftWithSpeakersC" +
+      "ompleted*F\n\017RecordingSource\022\034\n\030RECORDING" +
+      "_SOURCE_UNKNOWN\020\000\022\n\n\006UPLOAD\020\001\022\t\n\005EVENT\020\002" +
+      "*F\n\rRecordingType\022\032\n\026RECORDING_TYPE_UNKN" +
+      "OWN\020\000\022\r\n\tRESERVOIR\020\001\022\n\n\006CLIENT\020\002B%\n!com." +
+      "parrothq.events_monitoring.v1P\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -63,7 +66,7 @@ public final class Expectations {
     internal_static_events_monitoring_v1_RecordingPreprocessingStarted_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_events_monitoring_v1_RecordingPreprocessingStarted_descriptor,
-        new java.lang.String[] { "AudioLengthSeconds", "Source", });
+        new java.lang.String[] { "AudioLengthSeconds", "Source", "Type", });
     internal_static_events_monitoring_v1_LiveTranscriptRoughDraftCompleted_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_events_monitoring_v1_LiveTranscriptRoughDraftCompleted_fieldAccessorTable = new

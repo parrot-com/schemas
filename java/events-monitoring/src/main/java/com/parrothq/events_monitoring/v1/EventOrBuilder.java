@@ -36,4 +36,23 @@ public interface EventOrBuilder extends
    * <code>.google.protobuf.Any spec = 2;</code>
    */
   com.google.protobuf.AnyOrBuilder getSpecOrBuilder();
+
+  /**
+   * <pre>
+   * Type of this event (Normal, Error), new types could be added in the future.
+   * </pre>
+   *
+   * <code>.events_monitoring.v1.EventType type = 3;</code>
+   * @return The enum numeric value on the wire for type.
+   */
+  int getTypeValue();
+  /**
+   * <pre>
+   * Type of this event (Normal, Error), new types could be added in the future.
+   * </pre>
+   *
+   * <code>.events_monitoring.v1.EventType type = 3;</code>
+   * @return The type.
+   */
+  com.parrothq.events_monitoring.v1.EventType getType();
 }

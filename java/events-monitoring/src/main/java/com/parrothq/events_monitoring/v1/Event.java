@@ -16,6 +16,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private Event() {
+    type_ = 0;
   }
 
   @java.lang.Override
@@ -72,6 +73,12 @@ private static final long serialVersionUID = 0L;
               spec_ = subBuilder.buildPartial();
             }
 
+            break;
+          }
+          case 24: {
+            int rawValue = input.readEnum();
+
+            type_ = rawValue;
             break;
           }
           default: {
@@ -158,6 +165,33 @@ private static final long serialVersionUID = 0L;
     return getSpec();
   }
 
+  public static final int TYPE_FIELD_NUMBER = 3;
+  private int type_;
+  /**
+   * <pre>
+   * Type of this event (Normal, Error), new types could be added in the future.
+   * </pre>
+   *
+   * <code>.events_monitoring.v1.EventType type = 3;</code>
+   * @return The enum numeric value on the wire for type.
+   */
+  @java.lang.Override public int getTypeValue() {
+    return type_;
+  }
+  /**
+   * <pre>
+   * Type of this event (Normal, Error), new types could be added in the future.
+   * </pre>
+   *
+   * <code>.events_monitoring.v1.EventType type = 3;</code>
+   * @return The type.
+   */
+  @java.lang.Override public com.parrothq.events_monitoring.v1.EventType getType() {
+    @SuppressWarnings("deprecation")
+    com.parrothq.events_monitoring.v1.EventType result = com.parrothq.events_monitoring.v1.EventType.valueOf(type_);
+    return result == null ? com.parrothq.events_monitoring.v1.EventType.UNRECOGNIZED : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -178,6 +212,9 @@ private static final long serialVersionUID = 0L;
     if (spec_ != null) {
       output.writeMessage(2, getSpec());
     }
+    if (type_ != com.parrothq.events_monitoring.v1.EventType.EVENT_TYPE_UNKNOWN.getNumber()) {
+      output.writeEnum(3, type_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -194,6 +231,10 @@ private static final long serialVersionUID = 0L;
     if (spec_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getSpec());
+    }
+    if (type_ != com.parrothq.events_monitoring.v1.EventType.EVENT_TYPE_UNKNOWN.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(3, type_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -220,6 +261,7 @@ private static final long serialVersionUID = 0L;
       if (!getSpec()
           .equals(other.getSpec())) return false;
     }
+    if (type_ != other.type_) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -239,6 +281,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + SPEC_FIELD_NUMBER;
       hash = (53 * hash) + getSpec().hashCode();
     }
+    hash = (37 * hash) + TYPE_FIELD_NUMBER;
+    hash = (53 * hash) + type_;
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -384,6 +428,8 @@ private static final long serialVersionUID = 0L;
         spec_ = null;
         specBuilder_ = null;
       }
+      type_ = 0;
+
       return this;
     }
 
@@ -420,6 +466,7 @@ private static final long serialVersionUID = 0L;
       } else {
         result.spec_ = specBuilder_.build();
       }
+      result.type_ = type_;
       onBuilt();
       return result;
     }
@@ -473,6 +520,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasSpec()) {
         mergeSpec(other.getSpec());
+      }
+      if (other.type_ != 0) {
+        setTypeValue(other.getTypeValue());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -739,6 +789,80 @@ private static final long serialVersionUID = 0L;
         spec_ = null;
       }
       return specBuilder_;
+    }
+
+    private int type_ = 0;
+    /**
+     * <pre>
+     * Type of this event (Normal, Error), new types could be added in the future.
+     * </pre>
+     *
+     * <code>.events_monitoring.v1.EventType type = 3;</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    @java.lang.Override public int getTypeValue() {
+      return type_;
+    }
+    /**
+     * <pre>
+     * Type of this event (Normal, Error), new types could be added in the future.
+     * </pre>
+     *
+     * <code>.events_monitoring.v1.EventType type = 3;</code>
+     * @param value The enum numeric value on the wire for type to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTypeValue(int value) {
+      
+      type_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Type of this event (Normal, Error), new types could be added in the future.
+     * </pre>
+     *
+     * <code>.events_monitoring.v1.EventType type = 3;</code>
+     * @return The type.
+     */
+    @java.lang.Override
+    public com.parrothq.events_monitoring.v1.EventType getType() {
+      @SuppressWarnings("deprecation")
+      com.parrothq.events_monitoring.v1.EventType result = com.parrothq.events_monitoring.v1.EventType.valueOf(type_);
+      return result == null ? com.parrothq.events_monitoring.v1.EventType.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * Type of this event (Normal, Error), new types could be added in the future.
+     * </pre>
+     *
+     * <code>.events_monitoring.v1.EventType type = 3;</code>
+     * @param value The type to set.
+     * @return This builder for chaining.
+     */
+    public Builder setType(com.parrothq.events_monitoring.v1.EventType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      
+      type_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Type of this event (Normal, Error), new types could be added in the future.
+     * </pre>
+     *
+     * <code>.events_monitoring.v1.EventType type = 3;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearType() {
+      
+      type_ = 0;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

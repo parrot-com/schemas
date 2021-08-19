@@ -17,6 +17,7 @@ private static final long serialVersionUID = 0L;
   }
   private RecordingPreprocessingStarted() {
     source_ = 0;
+    type_ = 0;
   }
 
   @java.lang.Override
@@ -58,6 +59,12 @@ private static final long serialVersionUID = 0L;
             int rawValue = input.readEnum();
 
             source_ = rawValue;
+            break;
+          }
+          case 24: {
+            int rawValue = input.readEnum();
+
+            type_ = rawValue;
             break;
           }
           default: {
@@ -122,6 +129,25 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.parrothq.events_monitoring.v1.RecordingSource.UNRECOGNIZED : result;
   }
 
+  public static final int TYPE_FIELD_NUMBER = 3;
+  private int type_;
+  /**
+   * <code>.events_monitoring.v1.RecordingType type = 3;</code>
+   * @return The enum numeric value on the wire for type.
+   */
+  @java.lang.Override public int getTypeValue() {
+    return type_;
+  }
+  /**
+   * <code>.events_monitoring.v1.RecordingType type = 3;</code>
+   * @return The type.
+   */
+  @java.lang.Override public com.parrothq.events_monitoring.v1.RecordingType getType() {
+    @SuppressWarnings("deprecation")
+    com.parrothq.events_monitoring.v1.RecordingType result = com.parrothq.events_monitoring.v1.RecordingType.valueOf(type_);
+    return result == null ? com.parrothq.events_monitoring.v1.RecordingType.UNRECOGNIZED : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -142,6 +168,9 @@ private static final long serialVersionUID = 0L;
     if (source_ != com.parrothq.events_monitoring.v1.RecordingSource.RECORDING_SOURCE_UNKNOWN.getNumber()) {
       output.writeEnum(2, source_);
     }
+    if (type_ != com.parrothq.events_monitoring.v1.RecordingType.RECORDING_TYPE_UNKNOWN.getNumber()) {
+      output.writeEnum(3, type_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -158,6 +187,10 @@ private static final long serialVersionUID = 0L;
     if (source_ != com.parrothq.events_monitoring.v1.RecordingSource.RECORDING_SOURCE_UNKNOWN.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(2, source_);
+    }
+    if (type_ != com.parrothq.events_monitoring.v1.RecordingType.RECORDING_TYPE_UNKNOWN.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(3, type_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -177,6 +210,7 @@ private static final long serialVersionUID = 0L;
     if (getAudioLengthSeconds()
         != other.getAudioLengthSeconds()) return false;
     if (source_ != other.source_) return false;
+    if (type_ != other.type_) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -192,6 +226,8 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getAudioLengthSeconds();
     hash = (37 * hash) + SOURCE_FIELD_NUMBER;
     hash = (53 * hash) + source_;
+    hash = (37 * hash) + TYPE_FIELD_NUMBER;
+    hash = (53 * hash) + type_;
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -329,6 +365,8 @@ private static final long serialVersionUID = 0L;
 
       source_ = 0;
 
+      type_ = 0;
+
       return this;
     }
 
@@ -357,6 +395,7 @@ private static final long serialVersionUID = 0L;
       com.parrothq.events_monitoring.v1.RecordingPreprocessingStarted result = new com.parrothq.events_monitoring.v1.RecordingPreprocessingStarted(this);
       result.audioLengthSeconds_ = audioLengthSeconds_;
       result.source_ = source_;
+      result.type_ = type_;
       onBuilt();
       return result;
     }
@@ -410,6 +449,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.source_ != 0) {
         setSourceValue(other.getSourceValue());
+      }
+      if (other.type_ != 0) {
+        setTypeValue(other.getTypeValue());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -521,6 +563,60 @@ private static final long serialVersionUID = 0L;
     public Builder clearSource() {
       
       source_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int type_ = 0;
+    /**
+     * <code>.events_monitoring.v1.RecordingType type = 3;</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    @java.lang.Override public int getTypeValue() {
+      return type_;
+    }
+    /**
+     * <code>.events_monitoring.v1.RecordingType type = 3;</code>
+     * @param value The enum numeric value on the wire for type to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTypeValue(int value) {
+      
+      type_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.events_monitoring.v1.RecordingType type = 3;</code>
+     * @return The type.
+     */
+    @java.lang.Override
+    public com.parrothq.events_monitoring.v1.RecordingType getType() {
+      @SuppressWarnings("deprecation")
+      com.parrothq.events_monitoring.v1.RecordingType result = com.parrothq.events_monitoring.v1.RecordingType.valueOf(type_);
+      return result == null ? com.parrothq.events_monitoring.v1.RecordingType.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.events_monitoring.v1.RecordingType type = 3;</code>
+     * @param value The type to set.
+     * @return This builder for chaining.
+     */
+    public Builder setType(com.parrothq.events_monitoring.v1.RecordingType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      
+      type_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.events_monitoring.v1.RecordingType type = 3;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearType() {
+      
+      type_ = 0;
       onChanged();
       return this;
     }
