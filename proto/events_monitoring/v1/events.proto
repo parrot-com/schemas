@@ -9,13 +9,27 @@ import "google/protobuf/any.proto";
 import "google/protobuf/timestamp.proto";
 
 message Header {
-	string event_type = 1;
-	string correlation_id = 2;
-	google.protobuf.Timestamp timestamp = 3;
-	bool silent = 4;
+  // Type of the event in spec. Used for serializing.
+  string event_type = 1;
+  // Unique identifier value that allow reference to a particular event chain.
+  string correlation_id = 2;
+  // Time of the event.
+  google.protobuf.Timestamp timestamp = 3;
+  // Silent events do NOT trigger notifications. Useful for newly added (untested) expectations.
+  bool silent = 4;
+}
+
+enum EventType {
+  EVENT_TYPE_UNKNOWN = 0;
+  // Event was processed normally.
+  NORMAL = 1;
+  // Error occurred while processing event.
+  ERROR = 2;
 }
 
 message Event {
-	Header header = 1;
-	google.protobuf.Any spec = 2;
+  Header header = 1;
+  google.protobuf.Any spec = 2;
+  // Type of this event (Normal, Error), new types could be added in the future.
+  EventType type = 3;
 }

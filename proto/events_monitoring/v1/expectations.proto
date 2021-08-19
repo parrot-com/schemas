@@ -12,9 +12,16 @@ enum RecordingSource {
   EVENT = 2;
 }
 
+enum RecordingType {
+  RECORDING_TYPE_UNKNOWN = 0;
+  RESERVOIR = 1;
+  CLIENT = 2;
+}
+
 message RecordingPreprocessingStarted {
   int32 audio_length_seconds = 1;
   RecordingSource source = 2;
+  RecordingType type = 3;
 }
 
 message LiveTranscriptRoughDraftCompleted {
