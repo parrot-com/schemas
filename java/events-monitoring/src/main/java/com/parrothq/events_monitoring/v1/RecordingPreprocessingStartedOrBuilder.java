@@ -8,30 +8,42 @@ public interface RecordingPreprocessingStartedOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>int32 audio_length_seconds = 1;</code>
-   * @return The audioLengthSeconds.
-   */
-  int getAudioLengthSeconds();
-
-  /**
-   * <code>.events_monitoring.v1.RecordingSource source = 2;</code>
+   * <code>.events_monitoring.v1.RecordingSource source = 1;</code>
    * @return The enum numeric value on the wire for source.
    */
   int getSourceValue();
   /**
-   * <code>.events_monitoring.v1.RecordingSource source = 2;</code>
+   * <code>.events_monitoring.v1.RecordingSource source = 1;</code>
    * @return The source.
    */
   com.parrothq.events_monitoring.v1.RecordingSource getSource();
 
   /**
-   * <code>.events_monitoring.v1.RecordingType type = 3;</code>
+   * <code>.events_monitoring.v1.RecordingType type = 2;</code>
    * @return The enum numeric value on the wire for type.
    */
   int getTypeValue();
   /**
-   * <code>.events_monitoring.v1.RecordingType type = 3;</code>
+   * <code>.events_monitoring.v1.RecordingType type = 2;</code>
    * @return The type.
    */
   com.parrothq.events_monitoring.v1.RecordingType getType();
+
+  /**
+   * <code>bool has_video = 3;</code>
+   * @return The hasVideo.
+   */
+  boolean getHasVideo();
+
+  /**
+   * <code>bool has_exhibits = 4;</code>
+   * @return The hasExhibits.
+   */
+  boolean getHasExhibits();
+
+  /**
+   * <code>bool has_unwanted_parts = 5;</code>
+   * @return The hasUnwantedParts.
+   */
+  boolean getHasUnwantedParts();
 }

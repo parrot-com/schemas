@@ -3,7 +3,7 @@
 
 package com.parrothq.events_monitoring.v1;
 
-public interface LiveTranscriptRoughDraftCompletedOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:events_monitoring.v1.LiveTranscriptRoughDraftCompleted)
+public interface GenerateDocumentsCompletedOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:events_monitoring.v1.GenerateDocumentsCompleted)
     com.google.protobuf.MessageOrBuilder {
 }
