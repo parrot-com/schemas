@@ -4,25 +4,25 @@
 package com.parrothq.events_monitoring.v1;
 
 /**
- * Protobuf type {@code events_monitoring.v1.RemoveUnwantedAudioCompleted}
+ * Protobuf type {@code events_monitoring.v1.RoughDraftWithSpeakersCompleted}
  */
-public final class RemoveUnwantedAudioCompleted extends
+public final class RoughDraftWithSpeakersCompleted extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:events_monitoring.v1.RemoveUnwantedAudioCompleted)
-    RemoveUnwantedAudioCompletedOrBuilder {
+    // @@protoc_insertion_point(message_implements:events_monitoring.v1.RoughDraftWithSpeakersCompleted)
+    RoughDraftWithSpeakersCompletedOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use RemoveUnwantedAudioCompleted.newBuilder() to construct.
-  private RemoveUnwantedAudioCompleted(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use RoughDraftWithSpeakersCompleted.newBuilder() to construct.
+  private RoughDraftWithSpeakersCompleted(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private RemoveUnwantedAudioCompleted() {
+  private RoughDraftWithSpeakersCompleted() {
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new RemoveUnwantedAudioCompleted();
+    return new RoughDraftWithSpeakersCompleted();
   }
 
   @java.lang.Override
@@ -30,7 +30,7 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private RemoveUnwantedAudioCompleted(
+  private RoughDraftWithSpeakersCompleted(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -69,15 +69,15 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.parrothq.events_monitoring.v1.Expectations.internal_static_events_monitoring_v1_RemoveUnwantedAudioCompleted_descriptor;
+    return com.parrothq.events_monitoring.v1.Expectations.internal_static_events_monitoring_v1_RoughDraftWithSpeakersCompleted_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.parrothq.events_monitoring.v1.Expectations.internal_static_events_monitoring_v1_RemoveUnwantedAudioCompleted_fieldAccessorTable
+    return com.parrothq.events_monitoring.v1.Expectations.internal_static_events_monitoring_v1_RoughDraftWithSpeakersCompleted_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.parrothq.events_monitoring.v1.RemoveUnwantedAudioCompleted.class, com.parrothq.events_monitoring.v1.RemoveUnwantedAudioCompleted.Builder.class);
+            com.parrothq.events_monitoring.v1.RoughDraftWithSpeakersCompleted.class, com.parrothq.events_monitoring.v1.RoughDraftWithSpeakersCompleted.Builder.class);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -113,10 +113,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.parrothq.events_monitoring.v1.RemoveUnwantedAudioCompleted)) {
+    if (!(obj instanceof com.parrothq.events_monitoring.v1.RoughDraftWithSpeakersCompleted)) {
       return super.equals(obj);
     }
-    com.parrothq.events_monitoring.v1.RemoveUnwantedAudioCompleted other = (com.parrothq.events_monitoring.v1.RemoveUnwantedAudioCompleted) obj;
+    com.parrothq.events_monitoring.v1.RoughDraftWithSpeakersCompleted other = (com.parrothq.events_monitoring.v1.RoughDraftWithSpeakersCompleted) obj;
 
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
@@ -134,69 +134,69 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.parrothq.events_monitoring.v1.RemoveUnwantedAudioCompleted parseFrom(
+  public static com.parrothq.events_monitoring.v1.RoughDraftWithSpeakersCompleted parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.parrothq.events_monitoring.v1.RemoveUnwantedAudioCompleted parseFrom(
+  public static com.parrothq.events_monitoring.v1.RoughDraftWithSpeakersCompleted parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.parrothq.events_monitoring.v1.RemoveUnwantedAudioCompleted parseFrom(
+  public static com.parrothq.events_monitoring.v1.RoughDraftWithSpeakersCompleted parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.parrothq.events_monitoring.v1.RemoveUnwantedAudioCompleted parseFrom(
+  public static com.parrothq.events_monitoring.v1.RoughDraftWithSpeakersCompleted parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.parrothq.events_monitoring.v1.RemoveUnwantedAudioCompleted parseFrom(byte[] data)
+  public static com.parrothq.events_monitoring.v1.RoughDraftWithSpeakersCompleted parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.parrothq.events_monitoring.v1.RemoveUnwantedAudioCompleted parseFrom(
+  public static com.parrothq.events_monitoring.v1.RoughDraftWithSpeakersCompleted parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.parrothq.events_monitoring.v1.RemoveUnwantedAudioCompleted parseFrom(java.io.InputStream input)
+  public static com.parrothq.events_monitoring.v1.RoughDraftWithSpeakersCompleted parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.parrothq.events_monitoring.v1.RemoveUnwantedAudioCompleted parseFrom(
+  public static com.parrothq.events_monitoring.v1.RoughDraftWithSpeakersCompleted parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.parrothq.events_monitoring.v1.RemoveUnwantedAudioCompleted parseDelimitedFrom(java.io.InputStream input)
+  public static com.parrothq.events_monitoring.v1.RoughDraftWithSpeakersCompleted parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static com.parrothq.events_monitoring.v1.RemoveUnwantedAudioCompleted parseDelimitedFrom(
+  public static com.parrothq.events_monitoring.v1.RoughDraftWithSpeakersCompleted parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.parrothq.events_monitoring.v1.RemoveUnwantedAudioCompleted parseFrom(
+  public static com.parrothq.events_monitoring.v1.RoughDraftWithSpeakersCompleted parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.parrothq.events_monitoring.v1.RemoveUnwantedAudioCompleted parseFrom(
+  public static com.parrothq.events_monitoring.v1.RoughDraftWithSpeakersCompleted parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -209,7 +209,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.parrothq.events_monitoring.v1.RemoveUnwantedAudioCompleted prototype) {
+  public static Builder newBuilder(com.parrothq.events_monitoring.v1.RoughDraftWithSpeakersCompleted prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -225,26 +225,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code events_monitoring.v1.RemoveUnwantedAudioCompleted}
+   * Protobuf type {@code events_monitoring.v1.RoughDraftWithSpeakersCompleted}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:events_monitoring.v1.RemoveUnwantedAudioCompleted)
-      com.parrothq.events_monitoring.v1.RemoveUnwantedAudioCompletedOrBuilder {
+      // @@protoc_insertion_point(builder_implements:events_monitoring.v1.RoughDraftWithSpeakersCompleted)
+      com.parrothq.events_monitoring.v1.RoughDraftWithSpeakersCompletedOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.parrothq.events_monitoring.v1.Expectations.internal_static_events_monitoring_v1_RemoveUnwantedAudioCompleted_descriptor;
+      return com.parrothq.events_monitoring.v1.Expectations.internal_static_events_monitoring_v1_RoughDraftWithSpeakersCompleted_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.parrothq.events_monitoring.v1.Expectations.internal_static_events_monitoring_v1_RemoveUnwantedAudioCompleted_fieldAccessorTable
+      return com.parrothq.events_monitoring.v1.Expectations.internal_static_events_monitoring_v1_RoughDraftWithSpeakersCompleted_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.parrothq.events_monitoring.v1.RemoveUnwantedAudioCompleted.class, com.parrothq.events_monitoring.v1.RemoveUnwantedAudioCompleted.Builder.class);
+              com.parrothq.events_monitoring.v1.RoughDraftWithSpeakersCompleted.class, com.parrothq.events_monitoring.v1.RoughDraftWithSpeakersCompleted.Builder.class);
     }
 
-    // Construct using com.parrothq.events_monitoring.v1.RemoveUnwantedAudioCompleted.newBuilder()
+    // Construct using com.parrothq.events_monitoring.v1.RoughDraftWithSpeakersCompleted.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -268,17 +268,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.parrothq.events_monitoring.v1.Expectations.internal_static_events_monitoring_v1_RemoveUnwantedAudioCompleted_descriptor;
+      return com.parrothq.events_monitoring.v1.Expectations.internal_static_events_monitoring_v1_RoughDraftWithSpeakersCompleted_descriptor;
     }
 
     @java.lang.Override
-    public com.parrothq.events_monitoring.v1.RemoveUnwantedAudioCompleted getDefaultInstanceForType() {
-      return com.parrothq.events_monitoring.v1.RemoveUnwantedAudioCompleted.getDefaultInstance();
+    public com.parrothq.events_monitoring.v1.RoughDraftWithSpeakersCompleted getDefaultInstanceForType() {
+      return com.parrothq.events_monitoring.v1.RoughDraftWithSpeakersCompleted.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.parrothq.events_monitoring.v1.RemoveUnwantedAudioCompleted build() {
-      com.parrothq.events_monitoring.v1.RemoveUnwantedAudioCompleted result = buildPartial();
+    public com.parrothq.events_monitoring.v1.RoughDraftWithSpeakersCompleted build() {
+      com.parrothq.events_monitoring.v1.RoughDraftWithSpeakersCompleted result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -286,8 +286,8 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.parrothq.events_monitoring.v1.RemoveUnwantedAudioCompleted buildPartial() {
-      com.parrothq.events_monitoring.v1.RemoveUnwantedAudioCompleted result = new com.parrothq.events_monitoring.v1.RemoveUnwantedAudioCompleted(this);
+    public com.parrothq.events_monitoring.v1.RoughDraftWithSpeakersCompleted buildPartial() {
+      com.parrothq.events_monitoring.v1.RoughDraftWithSpeakersCompleted result = new com.parrothq.events_monitoring.v1.RoughDraftWithSpeakersCompleted(this);
       onBuilt();
       return result;
     }
@@ -326,16 +326,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.parrothq.events_monitoring.v1.RemoveUnwantedAudioCompleted) {
-        return mergeFrom((com.parrothq.events_monitoring.v1.RemoveUnwantedAudioCompleted)other);
+      if (other instanceof com.parrothq.events_monitoring.v1.RoughDraftWithSpeakersCompleted) {
+        return mergeFrom((com.parrothq.events_monitoring.v1.RoughDraftWithSpeakersCompleted)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.parrothq.events_monitoring.v1.RemoveUnwantedAudioCompleted other) {
-      if (other == com.parrothq.events_monitoring.v1.RemoveUnwantedAudioCompleted.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.parrothq.events_monitoring.v1.RoughDraftWithSpeakersCompleted other) {
+      if (other == com.parrothq.events_monitoring.v1.RoughDraftWithSpeakersCompleted.getDefaultInstance()) return this;
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
@@ -351,11 +351,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.parrothq.events_monitoring.v1.RemoveUnwantedAudioCompleted parsedMessage = null;
+      com.parrothq.events_monitoring.v1.RoughDraftWithSpeakersCompleted parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.parrothq.events_monitoring.v1.RemoveUnwantedAudioCompleted) e.getUnfinishedMessage();
+        parsedMessage = (com.parrothq.events_monitoring.v1.RoughDraftWithSpeakersCompleted) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
         if (parsedMessage != null) {
@@ -377,41 +377,41 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:events_monitoring.v1.RemoveUnwantedAudioCompleted)
+    // @@protoc_insertion_point(builder_scope:events_monitoring.v1.RoughDraftWithSpeakersCompleted)
   }
 
-  // @@protoc_insertion_point(class_scope:events_monitoring.v1.RemoveUnwantedAudioCompleted)
-  private static final com.parrothq.events_monitoring.v1.RemoveUnwantedAudioCompleted DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:events_monitoring.v1.RoughDraftWithSpeakersCompleted)
+  private static final com.parrothq.events_monitoring.v1.RoughDraftWithSpeakersCompleted DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.parrothq.events_monitoring.v1.RemoveUnwantedAudioCompleted();
+    DEFAULT_INSTANCE = new com.parrothq.events_monitoring.v1.RoughDraftWithSpeakersCompleted();
   }
 
-  public static com.parrothq.events_monitoring.v1.RemoveUnwantedAudioCompleted getDefaultInstance() {
+  public static com.parrothq.events_monitoring.v1.RoughDraftWithSpeakersCompleted getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<RemoveUnwantedAudioCompleted>
-      PARSER = new com.google.protobuf.AbstractParser<RemoveUnwantedAudioCompleted>() {
+  private static final com.google.protobuf.Parser<RoughDraftWithSpeakersCompleted>
+      PARSER = new com.google.protobuf.AbstractParser<RoughDraftWithSpeakersCompleted>() {
     @java.lang.Override
-    public RemoveUnwantedAudioCompleted parsePartialFrom(
+    public RoughDraftWithSpeakersCompleted parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new RemoveUnwantedAudioCompleted(input, extensionRegistry);
+      return new RoughDraftWithSpeakersCompleted(input, extensionRegistry);
     }
   };
 
-  public static com.google.protobuf.Parser<RemoveUnwantedAudioCompleted> parser() {
+  public static com.google.protobuf.Parser<RoughDraftWithSpeakersCompleted> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<RemoveUnwantedAudioCompleted> getParserForType() {
+  public com.google.protobuf.Parser<RoughDraftWithSpeakersCompleted> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.parrothq.events_monitoring.v1.RemoveUnwantedAudioCompleted getDefaultInstanceForType() {
+  public com.parrothq.events_monitoring.v1.RoughDraftWithSpeakersCompleted getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

@@ -51,30 +51,20 @@ private static final long serialVersionUID = 0L;
             done = true;
             break;
           case 8: {
-            int rawValue = input.readEnum();
 
-            source_ = rawValue;
+            audioLengthSeconds_ = input.readInt32();
             break;
           }
           case 16: {
             int rawValue = input.readEnum();
 
-            type_ = rawValue;
+            source_ = rawValue;
             break;
           }
           case 24: {
+            int rawValue = input.readEnum();
 
-            hasVideo_ = input.readBool();
-            break;
-          }
-          case 32: {
-
-            hasExhibits_ = input.readBool();
-            break;
-          }
-          case 40: {
-
-            hasUnwantedParts_ = input.readBool();
+            type_ = rawValue;
             break;
           }
           default: {
@@ -109,17 +99,28 @@ private static final long serialVersionUID = 0L;
             com.parrothq.events_monitoring.v1.RecordingPreprocessingStarted.class, com.parrothq.events_monitoring.v1.RecordingPreprocessingStarted.Builder.class);
   }
 
-  public static final int SOURCE_FIELD_NUMBER = 1;
+  public static final int AUDIO_LENGTH_SECONDS_FIELD_NUMBER = 1;
+  private int audioLengthSeconds_;
+  /**
+   * <code>int32 audio_length_seconds = 1;</code>
+   * @return The audioLengthSeconds.
+   */
+  @java.lang.Override
+  public int getAudioLengthSeconds() {
+    return audioLengthSeconds_;
+  }
+
+  public static final int SOURCE_FIELD_NUMBER = 2;
   private int source_;
   /**
-   * <code>.events_monitoring.v1.RecordingSource source = 1;</code>
+   * <code>.events_monitoring.v1.RecordingSource source = 2;</code>
    * @return The enum numeric value on the wire for source.
    */
   @java.lang.Override public int getSourceValue() {
     return source_;
   }
   /**
-   * <code>.events_monitoring.v1.RecordingSource source = 1;</code>
+   * <code>.events_monitoring.v1.RecordingSource source = 2;</code>
    * @return The source.
    */
   @java.lang.Override public com.parrothq.events_monitoring.v1.RecordingSource getSource() {
@@ -128,56 +129,23 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.parrothq.events_monitoring.v1.RecordingSource.UNRECOGNIZED : result;
   }
 
-  public static final int TYPE_FIELD_NUMBER = 2;
+  public static final int TYPE_FIELD_NUMBER = 3;
   private int type_;
   /**
-   * <code>.events_monitoring.v1.RecordingType type = 2;</code>
+   * <code>.events_monitoring.v1.RecordingType type = 3;</code>
    * @return The enum numeric value on the wire for type.
    */
   @java.lang.Override public int getTypeValue() {
     return type_;
   }
   /**
-   * <code>.events_monitoring.v1.RecordingType type = 2;</code>
+   * <code>.events_monitoring.v1.RecordingType type = 3;</code>
    * @return The type.
    */
   @java.lang.Override public com.parrothq.events_monitoring.v1.RecordingType getType() {
     @SuppressWarnings("deprecation")
     com.parrothq.events_monitoring.v1.RecordingType result = com.parrothq.events_monitoring.v1.RecordingType.valueOf(type_);
     return result == null ? com.parrothq.events_monitoring.v1.RecordingType.UNRECOGNIZED : result;
-  }
-
-  public static final int HAS_VIDEO_FIELD_NUMBER = 3;
-  private boolean hasVideo_;
-  /**
-   * <code>bool has_video = 3;</code>
-   * @return The hasVideo.
-   */
-  @java.lang.Override
-  public boolean getHasVideo() {
-    return hasVideo_;
-  }
-
-  public static final int HAS_EXHIBITS_FIELD_NUMBER = 4;
-  private boolean hasExhibits_;
-  /**
-   * <code>bool has_exhibits = 4;</code>
-   * @return The hasExhibits.
-   */
-  @java.lang.Override
-  public boolean getHasExhibits() {
-    return hasExhibits_;
-  }
-
-  public static final int HAS_UNWANTED_PARTS_FIELD_NUMBER = 5;
-  private boolean hasUnwantedParts_;
-  /**
-   * <code>bool has_unwanted_parts = 5;</code>
-   * @return The hasUnwantedParts.
-   */
-  @java.lang.Override
-  public boolean getHasUnwantedParts() {
-    return hasUnwantedParts_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -194,20 +162,14 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    if (audioLengthSeconds_ != 0) {
+      output.writeInt32(1, audioLengthSeconds_);
+    }
     if (source_ != com.parrothq.events_monitoring.v1.RecordingSource.RECORDING_SOURCE_UNKNOWN.getNumber()) {
-      output.writeEnum(1, source_);
+      output.writeEnum(2, source_);
     }
     if (type_ != com.parrothq.events_monitoring.v1.RecordingType.RECORDING_TYPE_UNKNOWN.getNumber()) {
-      output.writeEnum(2, type_);
-    }
-    if (hasVideo_ != false) {
-      output.writeBool(3, hasVideo_);
-    }
-    if (hasExhibits_ != false) {
-      output.writeBool(4, hasExhibits_);
-    }
-    if (hasUnwantedParts_ != false) {
-      output.writeBool(5, hasUnwantedParts_);
+      output.writeEnum(3, type_);
     }
     unknownFields.writeTo(output);
   }
@@ -218,25 +180,17 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    if (audioLengthSeconds_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(1, audioLengthSeconds_);
+    }
     if (source_ != com.parrothq.events_monitoring.v1.RecordingSource.RECORDING_SOURCE_UNKNOWN.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(1, source_);
+        .computeEnumSize(2, source_);
     }
     if (type_ != com.parrothq.events_monitoring.v1.RecordingType.RECORDING_TYPE_UNKNOWN.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(2, type_);
-    }
-    if (hasVideo_ != false) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(3, hasVideo_);
-    }
-    if (hasExhibits_ != false) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(4, hasExhibits_);
-    }
-    if (hasUnwantedParts_ != false) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(5, hasUnwantedParts_);
+        .computeEnumSize(3, type_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -253,14 +207,10 @@ private static final long serialVersionUID = 0L;
     }
     com.parrothq.events_monitoring.v1.RecordingPreprocessingStarted other = (com.parrothq.events_monitoring.v1.RecordingPreprocessingStarted) obj;
 
+    if (getAudioLengthSeconds()
+        != other.getAudioLengthSeconds()) return false;
     if (source_ != other.source_) return false;
     if (type_ != other.type_) return false;
-    if (getHasVideo()
-        != other.getHasVideo()) return false;
-    if (getHasExhibits()
-        != other.getHasExhibits()) return false;
-    if (getHasUnwantedParts()
-        != other.getHasUnwantedParts()) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -272,19 +222,12 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + AUDIO_LENGTH_SECONDS_FIELD_NUMBER;
+    hash = (53 * hash) + getAudioLengthSeconds();
     hash = (37 * hash) + SOURCE_FIELD_NUMBER;
     hash = (53 * hash) + source_;
     hash = (37 * hash) + TYPE_FIELD_NUMBER;
     hash = (53 * hash) + type_;
-    hash = (37 * hash) + HAS_VIDEO_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-        getHasVideo());
-    hash = (37 * hash) + HAS_EXHIBITS_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-        getHasExhibits());
-    hash = (37 * hash) + HAS_UNWANTED_PARTS_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-        getHasUnwantedParts());
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -418,15 +361,11 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      audioLengthSeconds_ = 0;
+
       source_ = 0;
 
       type_ = 0;
-
-      hasVideo_ = false;
-
-      hasExhibits_ = false;
-
-      hasUnwantedParts_ = false;
 
       return this;
     }
@@ -454,11 +393,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.parrothq.events_monitoring.v1.RecordingPreprocessingStarted buildPartial() {
       com.parrothq.events_monitoring.v1.RecordingPreprocessingStarted result = new com.parrothq.events_monitoring.v1.RecordingPreprocessingStarted(this);
+      result.audioLengthSeconds_ = audioLengthSeconds_;
       result.source_ = source_;
       result.type_ = type_;
-      result.hasVideo_ = hasVideo_;
-      result.hasExhibits_ = hasExhibits_;
-      result.hasUnwantedParts_ = hasUnwantedParts_;
       onBuilt();
       return result;
     }
@@ -507,20 +444,14 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.parrothq.events_monitoring.v1.RecordingPreprocessingStarted other) {
       if (other == com.parrothq.events_monitoring.v1.RecordingPreprocessingStarted.getDefaultInstance()) return this;
+      if (other.getAudioLengthSeconds() != 0) {
+        setAudioLengthSeconds(other.getAudioLengthSeconds());
+      }
       if (other.source_ != 0) {
         setSourceValue(other.getSourceValue());
       }
       if (other.type_ != 0) {
         setTypeValue(other.getTypeValue());
-      }
-      if (other.getHasVideo() != false) {
-        setHasVideo(other.getHasVideo());
-      }
-      if (other.getHasExhibits() != false) {
-        setHasExhibits(other.getHasExhibits());
-      }
-      if (other.getHasUnwantedParts() != false) {
-        setHasUnwantedParts(other.getHasUnwantedParts());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -551,16 +482,47 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private int audioLengthSeconds_ ;
+    /**
+     * <code>int32 audio_length_seconds = 1;</code>
+     * @return The audioLengthSeconds.
+     */
+    @java.lang.Override
+    public int getAudioLengthSeconds() {
+      return audioLengthSeconds_;
+    }
+    /**
+     * <code>int32 audio_length_seconds = 1;</code>
+     * @param value The audioLengthSeconds to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAudioLengthSeconds(int value) {
+      
+      audioLengthSeconds_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int32 audio_length_seconds = 1;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAudioLengthSeconds() {
+      
+      audioLengthSeconds_ = 0;
+      onChanged();
+      return this;
+    }
+
     private int source_ = 0;
     /**
-     * <code>.events_monitoring.v1.RecordingSource source = 1;</code>
+     * <code>.events_monitoring.v1.RecordingSource source = 2;</code>
      * @return The enum numeric value on the wire for source.
      */
     @java.lang.Override public int getSourceValue() {
       return source_;
     }
     /**
-     * <code>.events_monitoring.v1.RecordingSource source = 1;</code>
+     * <code>.events_monitoring.v1.RecordingSource source = 2;</code>
      * @param value The enum numeric value on the wire for source to set.
      * @return This builder for chaining.
      */
@@ -571,7 +533,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.events_monitoring.v1.RecordingSource source = 1;</code>
+     * <code>.events_monitoring.v1.RecordingSource source = 2;</code>
      * @return The source.
      */
     @java.lang.Override
@@ -581,7 +543,7 @@ private static final long serialVersionUID = 0L;
       return result == null ? com.parrothq.events_monitoring.v1.RecordingSource.UNRECOGNIZED : result;
     }
     /**
-     * <code>.events_monitoring.v1.RecordingSource source = 1;</code>
+     * <code>.events_monitoring.v1.RecordingSource source = 2;</code>
      * @param value The source to set.
      * @return This builder for chaining.
      */
@@ -595,7 +557,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.events_monitoring.v1.RecordingSource source = 1;</code>
+     * <code>.events_monitoring.v1.RecordingSource source = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearSource() {
@@ -607,14 +569,14 @@ private static final long serialVersionUID = 0L;
 
     private int type_ = 0;
     /**
-     * <code>.events_monitoring.v1.RecordingType type = 2;</code>
+     * <code>.events_monitoring.v1.RecordingType type = 3;</code>
      * @return The enum numeric value on the wire for type.
      */
     @java.lang.Override public int getTypeValue() {
       return type_;
     }
     /**
-     * <code>.events_monitoring.v1.RecordingType type = 2;</code>
+     * <code>.events_monitoring.v1.RecordingType type = 3;</code>
      * @param value The enum numeric value on the wire for type to set.
      * @return This builder for chaining.
      */
@@ -625,7 +587,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.events_monitoring.v1.RecordingType type = 2;</code>
+     * <code>.events_monitoring.v1.RecordingType type = 3;</code>
      * @return The type.
      */
     @java.lang.Override
@@ -635,7 +597,7 @@ private static final long serialVersionUID = 0L;
       return result == null ? com.parrothq.events_monitoring.v1.RecordingType.UNRECOGNIZED : result;
     }
     /**
-     * <code>.events_monitoring.v1.RecordingType type = 2;</code>
+     * <code>.events_monitoring.v1.RecordingType type = 3;</code>
      * @param value The type to set.
      * @return This builder for chaining.
      */
@@ -649,105 +611,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.events_monitoring.v1.RecordingType type = 2;</code>
+     * <code>.events_monitoring.v1.RecordingType type = 3;</code>
      * @return This builder for chaining.
      */
     public Builder clearType() {
       
       type_ = 0;
-      onChanged();
-      return this;
-    }
-
-    private boolean hasVideo_ ;
-    /**
-     * <code>bool has_video = 3;</code>
-     * @return The hasVideo.
-     */
-    @java.lang.Override
-    public boolean getHasVideo() {
-      return hasVideo_;
-    }
-    /**
-     * <code>bool has_video = 3;</code>
-     * @param value The hasVideo to set.
-     * @return This builder for chaining.
-     */
-    public Builder setHasVideo(boolean value) {
-      
-      hasVideo_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>bool has_video = 3;</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearHasVideo() {
-      
-      hasVideo_ = false;
-      onChanged();
-      return this;
-    }
-
-    private boolean hasExhibits_ ;
-    /**
-     * <code>bool has_exhibits = 4;</code>
-     * @return The hasExhibits.
-     */
-    @java.lang.Override
-    public boolean getHasExhibits() {
-      return hasExhibits_;
-    }
-    /**
-     * <code>bool has_exhibits = 4;</code>
-     * @param value The hasExhibits to set.
-     * @return This builder for chaining.
-     */
-    public Builder setHasExhibits(boolean value) {
-      
-      hasExhibits_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>bool has_exhibits = 4;</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearHasExhibits() {
-      
-      hasExhibits_ = false;
-      onChanged();
-      return this;
-    }
-
-    private boolean hasUnwantedParts_ ;
-    /**
-     * <code>bool has_unwanted_parts = 5;</code>
-     * @return The hasUnwantedParts.
-     */
-    @java.lang.Override
-    public boolean getHasUnwantedParts() {
-      return hasUnwantedParts_;
-    }
-    /**
-     * <code>bool has_unwanted_parts = 5;</code>
-     * @param value The hasUnwantedParts to set.
-     * @return This builder for chaining.
-     */
-    public Builder setHasUnwantedParts(boolean value) {
-      
-      hasUnwantedParts_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>bool has_unwanted_parts = 5;</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearHasUnwantedParts() {
-      
-      hasUnwantedParts_ = false;
       onChanged();
       return this;
     }

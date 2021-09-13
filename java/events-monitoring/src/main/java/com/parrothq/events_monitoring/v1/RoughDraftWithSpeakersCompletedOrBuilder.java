@@ -3,7 +3,7 @@
 
 package com.parrothq.events_monitoring.v1;
 
-public interface RecordingPreprocessingCompletedOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:events_monitoring.v1.RecordingPreprocessingCompleted)
+public interface RoughDraftWithSpeakersCompletedOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:events_monitoring.v1.RoughDraftWithSpeakersCompleted)
     com.google.protobuf.MessageOrBuilder {
 }
