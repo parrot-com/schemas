@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'\n!com.parrothq.events_monitoring.v1P\001',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\'events_monitoring/v1/expectations.proto\x12\x14\x65vents_monitoring.v1\"\xa7\x01\n\x1dRecordingPreprocessingStarted\x12\x1c\n\x14\x61udio_length_seconds\x18\x01 \x01(\x05\x12\x35\n\x06source\x18\x02 \x01(\x0e\x32%.events_monitoring.v1.RecordingSource\x12\x31\n\x04type\x18\x03 \x01(\x0e\x32#.events_monitoring.v1.RecordingType\"#\n!LiveTranscriptRoughDraftCompleted\"\x15\n\x13RoughDraftCompleted\"!\n\x1fRoughDraftWithSpeakersCompleted*F\n\x0fRecordingSource\x12\x1c\n\x18RECORDING_SOURCE_UNKNOWN\x10\x00\x12\n\n\x06UPLOAD\x10\x01\x12\t\n\x05\x45VENT\x10\x02*F\n\rRecordingType\x12\x1a\n\x16RECORDING_TYPE_UNKNOWN\x10\x00\x12\r\n\tRESERVOIR\x10\x01\x12\n\n\x06\x43LIENT\x10\x02\x42%\n!com.parrothq.events_monitoring.v1P\x01\x62\x06proto3'
+  serialized_pb=b'\n\'events_monitoring/v1/expectations.proto\x12\x14\x65vents_monitoring.v1\"\xce\x01\n\x1dRecordingPreprocessingStarted\x12\x35\n\x06source\x18\x01 \x01(\x0e\x32%.events_monitoring.v1.RecordingSource\x12\x31\n\x04type\x18\x02 \x01(\x0e\x32#.events_monitoring.v1.RecordingType\x12\x11\n\thas_video\x18\x03 \x01(\x08\x12\x14\n\x0chas_exhibits\x18\x04 \x01(\x08\x12\x1a\n\x12has_unwanted_parts\x18\x05 \x01(\x08\"\x1b\n\x19TranscodingAudioCompleted\"\x1b\n\x19TranscodingVideoCompleted\"\x1e\n\x1cRemoveUnwantedAudioCompleted\"\x1e\n\x1cRemoveUnwantedVideoCompleted\"\x1a\n\x18\x43omputeWaveformCompleted\"\x1a\n\x18ProcessExhibitsCompleted\"!\n\x1fRecordingPreprocessingCompleted\"1\n\x11RoughDraftStarted\x12\x1c\n\x14\x61udio_length_seconds\x18\x01 \x01(\x05\"\x1c\n\x1aGenerateDocumentsCompleted\"%\n\x13RoughDraftCompleted\x12\x0e\n\x06status\x18\x01 \x01(\t*F\n\x0fRecordingSource\x12\x1c\n\x18RECORDING_SOURCE_UNKNOWN\x10\x00\x12\n\n\x06UPLOAD\x10\x01\x12\t\n\x05\x45VENT\x10\x02*F\n\rRecordingType\x12\x1a\n\x16RECORDING_TYPE_UNKNOWN\x10\x00\x12\r\n\tRESERVOIR\x10\x01\x12\n\n\x06\x43LIENT\x10\x02\x42%\n!com.parrothq.events_monitoring.v1P\x01\x62\x06proto3'
 )
 
 _RECORDINGSOURCE = _descriptor.EnumDescriptor(
@@ -48,8 +48,8 @@ _RECORDINGSOURCE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=330,
-  serialized_end=400,
+  serialized_start=607,
+  serialized_end=677,
 )
 _sym_db.RegisterEnumDescriptor(_RECORDINGSOURCE)
 
@@ -79,8 +79,8 @@ _RECORDINGTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=402,
-  serialized_end=472,
+  serialized_start=679,
+  serialized_end=749,
 )
 _sym_db.RegisterEnumDescriptor(_RECORDINGTYPE)
 
@@ -103,23 +103,37 @@ _RECORDINGPREPROCESSINGSTARTED = _descriptor.Descriptor(
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='audio_length_seconds', full_name='events_monitoring.v1.RecordingPreprocessingStarted.audio_length_seconds', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      name='source', full_name='events_monitoring.v1.RecordingPreprocessingStarted.source', index=0,
+      number=1, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='source', full_name='events_monitoring.v1.RecordingPreprocessingStarted.source', index=1,
+      name='type', full_name='events_monitoring.v1.RecordingPreprocessingStarted.type', index=1,
       number=2, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='type', full_name='events_monitoring.v1.RecordingPreprocessingStarted.type', index=2,
-      number=3, type=14, cpp_type=8, label=1,
-      has_default_value=False, default_value=0,
+      name='has_video', full_name='events_monitoring.v1.RecordingPreprocessingStarted.has_video', index=2,
+      number=3, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='has_exhibits', full_name='events_monitoring.v1.RecordingPreprocessingStarted.has_exhibits', index=3,
+      number=4, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='has_unwanted_parts', full_name='events_monitoring.v1.RecordingPreprocessingStarted.has_unwanted_parts', index=4,
+      number=5, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
@@ -136,13 +150,13 @@ _RECORDINGPREPROCESSINGSTARTED = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=66,
-  serialized_end=233,
+  serialized_end=272,
 )
 
 
-_LIVETRANSCRIPTROUGHDRAFTCOMPLETED = _descriptor.Descriptor(
-  name='LiveTranscriptRoughDraftCompleted',
-  full_name='events_monitoring.v1.LiveTranscriptRoughDraftCompleted',
+_TRANSCODINGAUDIOCOMPLETED = _descriptor.Descriptor(
+  name='TranscodingAudioCompleted',
+  full_name='events_monitoring.v1.TranscodingAudioCompleted',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
@@ -160,8 +174,215 @@ _LIVETRANSCRIPTROUGHDRAFTCOMPLETED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=235,
-  serialized_end=270,
+  serialized_start=274,
+  serialized_end=301,
+)
+
+
+_TRANSCODINGVIDEOCOMPLETED = _descriptor.Descriptor(
+  name='TranscodingVideoCompleted',
+  full_name='events_monitoring.v1.TranscodingVideoCompleted',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=303,
+  serialized_end=330,
+)
+
+
+_REMOVEUNWANTEDAUDIOCOMPLETED = _descriptor.Descriptor(
+  name='RemoveUnwantedAudioCompleted',
+  full_name='events_monitoring.v1.RemoveUnwantedAudioCompleted',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=332,
+  serialized_end=362,
+)
+
+
+_REMOVEUNWANTEDVIDEOCOMPLETED = _descriptor.Descriptor(
+  name='RemoveUnwantedVideoCompleted',
+  full_name='events_monitoring.v1.RemoveUnwantedVideoCompleted',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=364,
+  serialized_end=394,
+)
+
+
+_COMPUTEWAVEFORMCOMPLETED = _descriptor.Descriptor(
+  name='ComputeWaveformCompleted',
+  full_name='events_monitoring.v1.ComputeWaveformCompleted',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=396,
+  serialized_end=422,
+)
+
+
+_PROCESSEXHIBITSCOMPLETED = _descriptor.Descriptor(
+  name='ProcessExhibitsCompleted',
+  full_name='events_monitoring.v1.ProcessExhibitsCompleted',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=424,
+  serialized_end=450,
+)
+
+
+_RECORDINGPREPROCESSINGCOMPLETED = _descriptor.Descriptor(
+  name='RecordingPreprocessingCompleted',
+  full_name='events_monitoring.v1.RecordingPreprocessingCompleted',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=452,
+  serialized_end=485,
+)
+
+
+_ROUGHDRAFTSTARTED = _descriptor.Descriptor(
+  name='RoughDraftStarted',
+  full_name='events_monitoring.v1.RoughDraftStarted',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='audio_length_seconds', full_name='events_monitoring.v1.RoughDraftStarted.audio_length_seconds', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=487,
+  serialized_end=536,
+)
+
+
+_GENERATEDOCUMENTSCOMPLETED = _descriptor.Descriptor(
+  name='GenerateDocumentsCompleted',
+  full_name='events_monitoring.v1.GenerateDocumentsCompleted',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=538,
+  serialized_end=566,
 )
 
 
@@ -173,6 +394,13 @@ _ROUGHDRAFTCOMPLETED = _descriptor.Descriptor(
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
+    _descriptor.FieldDescriptor(
+      name='status', full_name='events_monitoring.v1.RoughDraftCompleted.status', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -185,41 +413,23 @@ _ROUGHDRAFTCOMPLETED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=272,
-  serialized_end=293,
-)
-
-
-_ROUGHDRAFTWITHSPEAKERSCOMPLETED = _descriptor.Descriptor(
-  name='RoughDraftWithSpeakersCompleted',
-  full_name='events_monitoring.v1.RoughDraftWithSpeakersCompleted',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=295,
-  serialized_end=328,
+  serialized_start=568,
+  serialized_end=605,
 )
 
 _RECORDINGPREPROCESSINGSTARTED.fields_by_name['source'].enum_type = _RECORDINGSOURCE
 _RECORDINGPREPROCESSINGSTARTED.fields_by_name['type'].enum_type = _RECORDINGTYPE
 DESCRIPTOR.message_types_by_name['RecordingPreprocessingStarted'] = _RECORDINGPREPROCESSINGSTARTED
-DESCRIPTOR.message_types_by_name['LiveTranscriptRoughDraftCompleted'] = _LIVETRANSCRIPTROUGHDRAFTCOMPLETED
+DESCRIPTOR.message_types_by_name['TranscodingAudioCompleted'] = _TRANSCODINGAUDIOCOMPLETED
+DESCRIPTOR.message_types_by_name['TranscodingVideoCompleted'] = _TRANSCODINGVIDEOCOMPLETED
+DESCRIPTOR.message_types_by_name['RemoveUnwantedAudioCompleted'] = _REMOVEUNWANTEDAUDIOCOMPLETED
+DESCRIPTOR.message_types_by_name['RemoveUnwantedVideoCompleted'] = _REMOVEUNWANTEDVIDEOCOMPLETED
+DESCRIPTOR.message_types_by_name['ComputeWaveformCompleted'] = _COMPUTEWAVEFORMCOMPLETED
+DESCRIPTOR.message_types_by_name['ProcessExhibitsCompleted'] = _PROCESSEXHIBITSCOMPLETED
+DESCRIPTOR.message_types_by_name['RecordingPreprocessingCompleted'] = _RECORDINGPREPROCESSINGCOMPLETED
+DESCRIPTOR.message_types_by_name['RoughDraftStarted'] = _ROUGHDRAFTSTARTED
+DESCRIPTOR.message_types_by_name['GenerateDocumentsCompleted'] = _GENERATEDOCUMENTSCOMPLETED
 DESCRIPTOR.message_types_by_name['RoughDraftCompleted'] = _ROUGHDRAFTCOMPLETED
-DESCRIPTOR.message_types_by_name['RoughDraftWithSpeakersCompleted'] = _ROUGHDRAFTWITHSPEAKERSCOMPLETED
 DESCRIPTOR.enum_types_by_name['RecordingSource'] = _RECORDINGSOURCE
 DESCRIPTOR.enum_types_by_name['RecordingType'] = _RECORDINGTYPE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -231,12 +441,68 @@ RecordingPreprocessingStarted = _reflection.GeneratedProtocolMessageType('Record
   })
 _sym_db.RegisterMessage(RecordingPreprocessingStarted)
 
-LiveTranscriptRoughDraftCompleted = _reflection.GeneratedProtocolMessageType('LiveTranscriptRoughDraftCompleted', (_message.Message,), {
-  'DESCRIPTOR' : _LIVETRANSCRIPTROUGHDRAFTCOMPLETED,
+TranscodingAudioCompleted = _reflection.GeneratedProtocolMessageType('TranscodingAudioCompleted', (_message.Message,), {
+  'DESCRIPTOR' : _TRANSCODINGAUDIOCOMPLETED,
   '__module__' : 'events_monitoring.v1.expectations_pb2'
-  # @@protoc_insertion_point(class_scope:events_monitoring.v1.LiveTranscriptRoughDraftCompleted)
+  # @@protoc_insertion_point(class_scope:events_monitoring.v1.TranscodingAudioCompleted)
   })
-_sym_db.RegisterMessage(LiveTranscriptRoughDraftCompleted)
+_sym_db.RegisterMessage(TranscodingAudioCompleted)
+
+TranscodingVideoCompleted = _reflection.GeneratedProtocolMessageType('TranscodingVideoCompleted', (_message.Message,), {
+  'DESCRIPTOR' : _TRANSCODINGVIDEOCOMPLETED,
+  '__module__' : 'events_monitoring.v1.expectations_pb2'
+  # @@protoc_insertion_point(class_scope:events_monitoring.v1.TranscodingVideoCompleted)
+  })
+_sym_db.RegisterMessage(TranscodingVideoCompleted)
+
+RemoveUnwantedAudioCompleted = _reflection.GeneratedProtocolMessageType('RemoveUnwantedAudioCompleted', (_message.Message,), {
+  'DESCRIPTOR' : _REMOVEUNWANTEDAUDIOCOMPLETED,
+  '__module__' : 'events_monitoring.v1.expectations_pb2'
+  # @@protoc_insertion_point(class_scope:events_monitoring.v1.RemoveUnwantedAudioCompleted)
+  })
+_sym_db.RegisterMessage(RemoveUnwantedAudioCompleted)
+
+RemoveUnwantedVideoCompleted = _reflection.GeneratedProtocolMessageType('RemoveUnwantedVideoCompleted', (_message.Message,), {
+  'DESCRIPTOR' : _REMOVEUNWANTEDVIDEOCOMPLETED,
+  '__module__' : 'events_monitoring.v1.expectations_pb2'
+  # @@protoc_insertion_point(class_scope:events_monitoring.v1.RemoveUnwantedVideoCompleted)
+  })
+_sym_db.RegisterMessage(RemoveUnwantedVideoCompleted)
+
+ComputeWaveformCompleted = _reflection.GeneratedProtocolMessageType('ComputeWaveformCompleted', (_message.Message,), {
+  'DESCRIPTOR' : _COMPUTEWAVEFORMCOMPLETED,
+  '__module__' : 'events_monitoring.v1.expectations_pb2'
+  # @@protoc_insertion_point(class_scope:events_monitoring.v1.ComputeWaveformCompleted)
+  })
+_sym_db.RegisterMessage(ComputeWaveformCompleted)
+
+ProcessExhibitsCompleted = _reflection.GeneratedProtocolMessageType('ProcessExhibitsCompleted', (_message.Message,), {
+  'DESCRIPTOR' : _PROCESSEXHIBITSCOMPLETED,
+  '__module__' : 'events_monitoring.v1.expectations_pb2'
+  # @@protoc_insertion_point(class_scope:events_monitoring.v1.ProcessExhibitsCompleted)
+  })
+_sym_db.RegisterMessage(ProcessExhibitsCompleted)
+
+RecordingPreprocessingCompleted = _reflection.GeneratedProtocolMessageType('RecordingPreprocessingCompleted', (_message.Message,), {
+  'DESCRIPTOR' : _RECORDINGPREPROCESSINGCOMPLETED,
+  '__module__' : 'events_monitoring.v1.expectations_pb2'
+  # @@protoc_insertion_point(class_scope:events_monitoring.v1.RecordingPreprocessingCompleted)
+  })
+_sym_db.RegisterMessage(RecordingPreprocessingCompleted)
+
+RoughDraftStarted = _reflection.GeneratedProtocolMessageType('RoughDraftStarted', (_message.Message,), {
+  'DESCRIPTOR' : _ROUGHDRAFTSTARTED,
+  '__module__' : 'events_monitoring.v1.expectations_pb2'
+  # @@protoc_insertion_point(class_scope:events_monitoring.v1.RoughDraftStarted)
+  })
+_sym_db.RegisterMessage(RoughDraftStarted)
+
+GenerateDocumentsCompleted = _reflection.GeneratedProtocolMessageType('GenerateDocumentsCompleted', (_message.Message,), {
+  'DESCRIPTOR' : _GENERATEDOCUMENTSCOMPLETED,
+  '__module__' : 'events_monitoring.v1.expectations_pb2'
+  # @@protoc_insertion_point(class_scope:events_monitoring.v1.GenerateDocumentsCompleted)
+  })
+_sym_db.RegisterMessage(GenerateDocumentsCompleted)
 
 RoughDraftCompleted = _reflection.GeneratedProtocolMessageType('RoughDraftCompleted', (_message.Message,), {
   'DESCRIPTOR' : _ROUGHDRAFTCOMPLETED,
@@ -244,13 +510,6 @@ RoughDraftCompleted = _reflection.GeneratedProtocolMessageType('RoughDraftComple
   # @@protoc_insertion_point(class_scope:events_monitoring.v1.RoughDraftCompleted)
   })
 _sym_db.RegisterMessage(RoughDraftCompleted)
-
-RoughDraftWithSpeakersCompleted = _reflection.GeneratedProtocolMessageType('RoughDraftWithSpeakersCompleted', (_message.Message,), {
-  'DESCRIPTOR' : _ROUGHDRAFTWITHSPEAKERSCOMPLETED,
-  '__module__' : 'events_monitoring.v1.expectations_pb2'
-  # @@protoc_insertion_point(class_scope:events_monitoring.v1.RoughDraftWithSpeakersCompleted)
-  })
-_sym_db.RegisterMessage(RoughDraftWithSpeakersCompleted)
 
 
 DESCRIPTOR._options = None

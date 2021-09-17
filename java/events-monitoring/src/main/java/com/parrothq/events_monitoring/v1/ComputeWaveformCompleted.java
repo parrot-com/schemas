@@ -4,25 +4,25 @@
 package com.parrothq.events_monitoring.v1;
 
 /**
- * Protobuf type {@code events_monitoring.v1.LiveTranscriptRoughDraftCompleted}
+ * Protobuf type {@code events_monitoring.v1.ComputeWaveformCompleted}
  */
-public final class LiveTranscriptRoughDraftCompleted extends
+public final class ComputeWaveformCompleted extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:events_monitoring.v1.LiveTranscriptRoughDraftCompleted)
-    LiveTranscriptRoughDraftCompletedOrBuilder {
+    // @@protoc_insertion_point(message_implements:events_monitoring.v1.ComputeWaveformCompleted)
+    ComputeWaveformCompletedOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use LiveTranscriptRoughDraftCompleted.newBuilder() to construct.
-  private LiveTranscriptRoughDraftCompleted(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use ComputeWaveformCompleted.newBuilder() to construct.
+  private ComputeWaveformCompleted(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private LiveTranscriptRoughDraftCompleted() {
+  private ComputeWaveformCompleted() {
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new LiveTranscriptRoughDraftCompleted();
+    return new ComputeWaveformCompleted();
   }
 
   @java.lang.Override
@@ -30,7 +30,7 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private LiveTranscriptRoughDraftCompleted(
+  private ComputeWaveformCompleted(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -69,15 +69,15 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.parrothq.events_monitoring.v1.Expectations.internal_static_events_monitoring_v1_LiveTranscriptRoughDraftCompleted_descriptor;
+    return com.parrothq.events_monitoring.v1.Expectations.internal_static_events_monitoring_v1_ComputeWaveformCompleted_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.parrothq.events_monitoring.v1.Expectations.internal_static_events_monitoring_v1_LiveTranscriptRoughDraftCompleted_fieldAccessorTable
+    return com.parrothq.events_monitoring.v1.Expectations.internal_static_events_monitoring_v1_ComputeWaveformCompleted_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.parrothq.events_monitoring.v1.LiveTranscriptRoughDraftCompleted.class, com.parrothq.events_monitoring.v1.LiveTranscriptRoughDraftCompleted.Builder.class);
+            com.parrothq.events_monitoring.v1.ComputeWaveformCompleted.class, com.parrothq.events_monitoring.v1.ComputeWaveformCompleted.Builder.class);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -113,10 +113,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.parrothq.events_monitoring.v1.LiveTranscriptRoughDraftCompleted)) {
+    if (!(obj instanceof com.parrothq.events_monitoring.v1.ComputeWaveformCompleted)) {
       return super.equals(obj);
     }
-    com.parrothq.events_monitoring.v1.LiveTranscriptRoughDraftCompleted other = (com.parrothq.events_monitoring.v1.LiveTranscriptRoughDraftCompleted) obj;
+    com.parrothq.events_monitoring.v1.ComputeWaveformCompleted other = (com.parrothq.events_monitoring.v1.ComputeWaveformCompleted) obj;
 
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
@@ -134,69 +134,69 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.parrothq.events_monitoring.v1.LiveTranscriptRoughDraftCompleted parseFrom(
+  public static com.parrothq.events_monitoring.v1.ComputeWaveformCompleted parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.parrothq.events_monitoring.v1.LiveTranscriptRoughDraftCompleted parseFrom(
+  public static com.parrothq.events_monitoring.v1.ComputeWaveformCompleted parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.parrothq.events_monitoring.v1.LiveTranscriptRoughDraftCompleted parseFrom(
+  public static com.parrothq.events_monitoring.v1.ComputeWaveformCompleted parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.parrothq.events_monitoring.v1.LiveTranscriptRoughDraftCompleted parseFrom(
+  public static com.parrothq.events_monitoring.v1.ComputeWaveformCompleted parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.parrothq.events_monitoring.v1.LiveTranscriptRoughDraftCompleted parseFrom(byte[] data)
+  public static com.parrothq.events_monitoring.v1.ComputeWaveformCompleted parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.parrothq.events_monitoring.v1.LiveTranscriptRoughDraftCompleted parseFrom(
+  public static com.parrothq.events_monitoring.v1.ComputeWaveformCompleted parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.parrothq.events_monitoring.v1.LiveTranscriptRoughDraftCompleted parseFrom(java.io.InputStream input)
+  public static com.parrothq.events_monitoring.v1.ComputeWaveformCompleted parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.parrothq.events_monitoring.v1.LiveTranscriptRoughDraftCompleted parseFrom(
+  public static com.parrothq.events_monitoring.v1.ComputeWaveformCompleted parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.parrothq.events_monitoring.v1.LiveTranscriptRoughDraftCompleted parseDelimitedFrom(java.io.InputStream input)
+  public static com.parrothq.events_monitoring.v1.ComputeWaveformCompleted parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static com.parrothq.events_monitoring.v1.LiveTranscriptRoughDraftCompleted parseDelimitedFrom(
+  public static com.parrothq.events_monitoring.v1.ComputeWaveformCompleted parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.parrothq.events_monitoring.v1.LiveTranscriptRoughDraftCompleted parseFrom(
+  public static com.parrothq.events_monitoring.v1.ComputeWaveformCompleted parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.parrothq.events_monitoring.v1.LiveTranscriptRoughDraftCompleted parseFrom(
+  public static com.parrothq.events_monitoring.v1.ComputeWaveformCompleted parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -209,7 +209,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.parrothq.events_monitoring.v1.LiveTranscriptRoughDraftCompleted prototype) {
+  public static Builder newBuilder(com.parrothq.events_monitoring.v1.ComputeWaveformCompleted prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -225,26 +225,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code events_monitoring.v1.LiveTranscriptRoughDraftCompleted}
+   * Protobuf type {@code events_monitoring.v1.ComputeWaveformCompleted}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:events_monitoring.v1.LiveTranscriptRoughDraftCompleted)
-      com.parrothq.events_monitoring.v1.LiveTranscriptRoughDraftCompletedOrBuilder {
+      // @@protoc_insertion_point(builder_implements:events_monitoring.v1.ComputeWaveformCompleted)
+      com.parrothq.events_monitoring.v1.ComputeWaveformCompletedOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.parrothq.events_monitoring.v1.Expectations.internal_static_events_monitoring_v1_LiveTranscriptRoughDraftCompleted_descriptor;
+      return com.parrothq.events_monitoring.v1.Expectations.internal_static_events_monitoring_v1_ComputeWaveformCompleted_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.parrothq.events_monitoring.v1.Expectations.internal_static_events_monitoring_v1_LiveTranscriptRoughDraftCompleted_fieldAccessorTable
+      return com.parrothq.events_monitoring.v1.Expectations.internal_static_events_monitoring_v1_ComputeWaveformCompleted_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.parrothq.events_monitoring.v1.LiveTranscriptRoughDraftCompleted.class, com.parrothq.events_monitoring.v1.LiveTranscriptRoughDraftCompleted.Builder.class);
+              com.parrothq.events_monitoring.v1.ComputeWaveformCompleted.class, com.parrothq.events_monitoring.v1.ComputeWaveformCompleted.Builder.class);
     }
 
-    // Construct using com.parrothq.events_monitoring.v1.LiveTranscriptRoughDraftCompleted.newBuilder()
+    // Construct using com.parrothq.events_monitoring.v1.ComputeWaveformCompleted.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -268,17 +268,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.parrothq.events_monitoring.v1.Expectations.internal_static_events_monitoring_v1_LiveTranscriptRoughDraftCompleted_descriptor;
+      return com.parrothq.events_monitoring.v1.Expectations.internal_static_events_monitoring_v1_ComputeWaveformCompleted_descriptor;
     }
 
     @java.lang.Override
-    public com.parrothq.events_monitoring.v1.LiveTranscriptRoughDraftCompleted getDefaultInstanceForType() {
-      return com.parrothq.events_monitoring.v1.LiveTranscriptRoughDraftCompleted.getDefaultInstance();
+    public com.parrothq.events_monitoring.v1.ComputeWaveformCompleted getDefaultInstanceForType() {
+      return com.parrothq.events_monitoring.v1.ComputeWaveformCompleted.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.parrothq.events_monitoring.v1.LiveTranscriptRoughDraftCompleted build() {
-      com.parrothq.events_monitoring.v1.LiveTranscriptRoughDraftCompleted result = buildPartial();
+    public com.parrothq.events_monitoring.v1.ComputeWaveformCompleted build() {
+      com.parrothq.events_monitoring.v1.ComputeWaveformCompleted result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -286,8 +286,8 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.parrothq.events_monitoring.v1.LiveTranscriptRoughDraftCompleted buildPartial() {
-      com.parrothq.events_monitoring.v1.LiveTranscriptRoughDraftCompleted result = new com.parrothq.events_monitoring.v1.LiveTranscriptRoughDraftCompleted(this);
+    public com.parrothq.events_monitoring.v1.ComputeWaveformCompleted buildPartial() {
+      com.parrothq.events_monitoring.v1.ComputeWaveformCompleted result = new com.parrothq.events_monitoring.v1.ComputeWaveformCompleted(this);
       onBuilt();
       return result;
     }
@@ -326,16 +326,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.parrothq.events_monitoring.v1.LiveTranscriptRoughDraftCompleted) {
-        return mergeFrom((com.parrothq.events_monitoring.v1.LiveTranscriptRoughDraftCompleted)other);
+      if (other instanceof com.parrothq.events_monitoring.v1.ComputeWaveformCompleted) {
+        return mergeFrom((com.parrothq.events_monitoring.v1.ComputeWaveformCompleted)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.parrothq.events_monitoring.v1.LiveTranscriptRoughDraftCompleted other) {
-      if (other == com.parrothq.events_monitoring.v1.LiveTranscriptRoughDraftCompleted.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.parrothq.events_monitoring.v1.ComputeWaveformCompleted other) {
+      if (other == com.parrothq.events_monitoring.v1.ComputeWaveformCompleted.getDefaultInstance()) return this;
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
@@ -351,11 +351,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.parrothq.events_monitoring.v1.LiveTranscriptRoughDraftCompleted parsedMessage = null;
+      com.parrothq.events_monitoring.v1.ComputeWaveformCompleted parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.parrothq.events_monitoring.v1.LiveTranscriptRoughDraftCompleted) e.getUnfinishedMessage();
+        parsedMessage = (com.parrothq.events_monitoring.v1.ComputeWaveformCompleted) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
         if (parsedMessage != null) {
@@ -377,41 +377,41 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:events_monitoring.v1.LiveTranscriptRoughDraftCompleted)
+    // @@protoc_insertion_point(builder_scope:events_monitoring.v1.ComputeWaveformCompleted)
   }
 
-  // @@protoc_insertion_point(class_scope:events_monitoring.v1.LiveTranscriptRoughDraftCompleted)
-  private static final com.parrothq.events_monitoring.v1.LiveTranscriptRoughDraftCompleted DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:events_monitoring.v1.ComputeWaveformCompleted)
+  private static final com.parrothq.events_monitoring.v1.ComputeWaveformCompleted DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.parrothq.events_monitoring.v1.LiveTranscriptRoughDraftCompleted();
+    DEFAULT_INSTANCE = new com.parrothq.events_monitoring.v1.ComputeWaveformCompleted();
   }
 
-  public static com.parrothq.events_monitoring.v1.LiveTranscriptRoughDraftCompleted getDefaultInstance() {
+  public static com.parrothq.events_monitoring.v1.ComputeWaveformCompleted getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<LiveTranscriptRoughDraftCompleted>
-      PARSER = new com.google.protobuf.AbstractParser<LiveTranscriptRoughDraftCompleted>() {
+  private static final com.google.protobuf.Parser<ComputeWaveformCompleted>
+      PARSER = new com.google.protobuf.AbstractParser<ComputeWaveformCompleted>() {
     @java.lang.Override
-    public LiveTranscriptRoughDraftCompleted parsePartialFrom(
+    public ComputeWaveformCompleted parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new LiveTranscriptRoughDraftCompleted(input, extensionRegistry);
+      return new ComputeWaveformCompleted(input, extensionRegistry);
     }
   };
 
-  public static com.google.protobuf.Parser<LiveTranscriptRoughDraftCompleted> parser() {
+  public static com.google.protobuf.Parser<ComputeWaveformCompleted> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<LiveTranscriptRoughDraftCompleted> getParserForType() {
+  public com.google.protobuf.Parser<ComputeWaveformCompleted> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.parrothq.events_monitoring.v1.LiveTranscriptRoughDraftCompleted getDefaultInstanceForType() {
+  public com.parrothq.events_monitoring.v1.ComputeWaveformCompleted getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 
