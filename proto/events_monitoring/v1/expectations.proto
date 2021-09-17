@@ -19,17 +19,33 @@ enum RecordingType {
 }
 
 message RecordingPreprocessingStarted {
-  int32 audio_length_seconds = 1;
-  RecordingSource source = 2;
-  RecordingType type = 3;
+  RecordingSource source = 1;
+  RecordingType type = 2;
+  bool has_video = 3;
+  bool has_exhibits = 4;
+  bool has_unwanted_parts = 5;
 }
 
-message LiveTranscriptRoughDraftCompleted {
+message TranscodingAudioCompleted {}
+
+message TranscodingVideoCompleted {}
+
+message RemoveUnwantedAudioCompleted {}
+
+message RemoveUnwantedVideoCompleted {}
+
+message ComputeWaveformCompleted {}
+
+message ProcessExhibitsCompleted {}
+
+message RecordingPreprocessingCompleted {}
+
+message RoughDraftStarted {
+  int32 audio_length_seconds = 1;
 }
+
+message GenerateDocumentsCompleted {}
 
 message RoughDraftCompleted {
+  string status = 1;
 }
-
-message RoughDraftWithSpeakersCompleted {
-}
-
