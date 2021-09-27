@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'\n!com.parrothq.events_monitoring.v1P\001',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\'events_monitoring/v1/expectations.proto\x12\x14\x65vents_monitoring.v1\"\xce\x01\n\x1dRecordingPreprocessingStarted\x12\x35\n\x06source\x18\x01 \x01(\x0e\x32%.events_monitoring.v1.RecordingSource\x12\x31\n\x04type\x18\x02 \x01(\x0e\x32#.events_monitoring.v1.RecordingType\x12\x11\n\thas_video\x18\x03 \x01(\x08\x12\x14\n\x0chas_exhibits\x18\x04 \x01(\x08\x12\x1a\n\x12has_unwanted_parts\x18\x05 \x01(\x08\"\x1b\n\x19TranscodingAudioCompleted\"\x1b\n\x19TranscodingVideoCompleted\"\x1e\n\x1cRemoveUnwantedAudioCompleted\"\x1e\n\x1cRemoveUnwantedVideoCompleted\"\x1a\n\x18\x43omputeWaveformCompleted\"\x1a\n\x18ProcessExhibitsCompleted\"!\n\x1fRecordingPreprocessingCompleted\"1\n\x11RoughDraftStarted\x12\x1c\n\x14\x61udio_length_seconds\x18\x01 \x01(\x05\"\x1c\n\x1aGenerateDocumentsCompleted\"%\n\x13RoughDraftCompleted\x12\x0e\n\x06status\x18\x01 \x01(\t*F\n\x0fRecordingSource\x12\x1c\n\x18RECORDING_SOURCE_UNKNOWN\x10\x00\x12\n\n\x06UPLOAD\x10\x01\x12\t\n\x05\x45VENT\x10\x02*F\n\rRecordingType\x12\x1a\n\x16RECORDING_TYPE_UNKNOWN\x10\x00\x12\r\n\tRESERVOIR\x10\x01\x12\n\n\x06\x43LIENT\x10\x02\x42%\n!com.parrothq.events_monitoring.v1P\x01\x62\x06proto3'
+  serialized_pb=b'\n\'events_monitoring/v1/expectations.proto\x12\x14\x65vents_monitoring.v1\"\xce\x01\n\x1dRecordingPreprocessingStarted\x12\x35\n\x06source\x18\x01 \x01(\x0e\x32%.events_monitoring.v1.RecordingSource\x12\x31\n\x04type\x18\x02 \x01(\x0e\x32#.events_monitoring.v1.RecordingType\x12\x11\n\thas_video\x18\x03 \x01(\x08\x12\x14\n\x0chas_exhibits\x18\x04 \x01(\x08\x12\x1a\n\x12has_unwanted_parts\x18\x05 \x01(\x08\"\x1b\n\x19TranscodingAudioCompleted\"\x1b\n\x19TranscodingVideoCompleted\"\x1e\n\x1cRemoveUnwantedAudioCompleted\"\x1e\n\x1cRemoveUnwantedVideoCompleted\" \n\x1e\x42lackOutUnwantedVideoCompleted\"\x1a\n\x18\x43omputeWaveformCompleted\"\x1a\n\x18ProcessExhibitsCompleted\"!\n\x1fRecordingPreprocessingCompleted\"1\n\x11RoughDraftStarted\x12\x1c\n\x14\x61udio_length_seconds\x18\x01 \x01(\x05\"\x1c\n\x1aGenerateDocumentsCompleted\"%\n\x13RoughDraftCompleted\x12\x0e\n\x06status\x18\x01 \x01(\t*F\n\x0fRecordingSource\x12\x1c\n\x18RECORDING_SOURCE_UNKNOWN\x10\x00\x12\n\n\x06UPLOAD\x10\x01\x12\t\n\x05\x45VENT\x10\x02*F\n\rRecordingType\x12\x1a\n\x16RECORDING_TYPE_UNKNOWN\x10\x00\x12\r\n\tRESERVOIR\x10\x01\x12\n\n\x06\x43LIENT\x10\x02\x42%\n!com.parrothq.events_monitoring.v1P\x01\x62\x06proto3'
 )
 
 _RECORDINGSOURCE = _descriptor.EnumDescriptor(
@@ -48,8 +48,8 @@ _RECORDINGSOURCE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=607,
-  serialized_end=677,
+  serialized_start=641,
+  serialized_end=711,
 )
 _sym_db.RegisterEnumDescriptor(_RECORDINGSOURCE)
 
@@ -79,8 +79,8 @@ _RECORDINGTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=679,
-  serialized_end=749,
+  serialized_start=713,
+  serialized_end=783,
 )
 _sym_db.RegisterEnumDescriptor(_RECORDINGTYPE)
 
@@ -254,6 +254,31 @@ _REMOVEUNWANTEDVIDEOCOMPLETED = _descriptor.Descriptor(
 )
 
 
+_BLACKOUTUNWANTEDVIDEOCOMPLETED = _descriptor.Descriptor(
+  name='BlackOutUnwantedVideoCompleted',
+  full_name='events_monitoring.v1.BlackOutUnwantedVideoCompleted',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=396,
+  serialized_end=428,
+)
+
+
 _COMPUTEWAVEFORMCOMPLETED = _descriptor.Descriptor(
   name='ComputeWaveformCompleted',
   full_name='events_monitoring.v1.ComputeWaveformCompleted',
@@ -274,8 +299,8 @@ _COMPUTEWAVEFORMCOMPLETED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=396,
-  serialized_end=422,
+  serialized_start=430,
+  serialized_end=456,
 )
 
 
@@ -299,8 +324,8 @@ _PROCESSEXHIBITSCOMPLETED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=424,
-  serialized_end=450,
+  serialized_start=458,
+  serialized_end=484,
 )
 
 
@@ -324,8 +349,8 @@ _RECORDINGPREPROCESSINGCOMPLETED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=452,
-  serialized_end=485,
+  serialized_start=486,
+  serialized_end=519,
 )
 
 
@@ -356,8 +381,8 @@ _ROUGHDRAFTSTARTED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=487,
-  serialized_end=536,
+  serialized_start=521,
+  serialized_end=570,
 )
 
 
@@ -381,8 +406,8 @@ _GENERATEDOCUMENTSCOMPLETED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=538,
-  serialized_end=566,
+  serialized_start=572,
+  serialized_end=600,
 )
 
 
@@ -413,8 +438,8 @@ _ROUGHDRAFTCOMPLETED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=568,
-  serialized_end=605,
+  serialized_start=602,
+  serialized_end=639,
 )
 
 _RECORDINGPREPROCESSINGSTARTED.fields_by_name['source'].enum_type = _RECORDINGSOURCE
@@ -424,6 +449,7 @@ DESCRIPTOR.message_types_by_name['TranscodingAudioCompleted'] = _TRANSCODINGAUDI
 DESCRIPTOR.message_types_by_name['TranscodingVideoCompleted'] = _TRANSCODINGVIDEOCOMPLETED
 DESCRIPTOR.message_types_by_name['RemoveUnwantedAudioCompleted'] = _REMOVEUNWANTEDAUDIOCOMPLETED
 DESCRIPTOR.message_types_by_name['RemoveUnwantedVideoCompleted'] = _REMOVEUNWANTEDVIDEOCOMPLETED
+DESCRIPTOR.message_types_by_name['BlackOutUnwantedVideoCompleted'] = _BLACKOUTUNWANTEDVIDEOCOMPLETED
 DESCRIPTOR.message_types_by_name['ComputeWaveformCompleted'] = _COMPUTEWAVEFORMCOMPLETED
 DESCRIPTOR.message_types_by_name['ProcessExhibitsCompleted'] = _PROCESSEXHIBITSCOMPLETED
 DESCRIPTOR.message_types_by_name['RecordingPreprocessingCompleted'] = _RECORDINGPREPROCESSINGCOMPLETED
@@ -468,6 +494,13 @@ RemoveUnwantedVideoCompleted = _reflection.GeneratedProtocolMessageType('RemoveU
   # @@protoc_insertion_point(class_scope:events_monitoring.v1.RemoveUnwantedVideoCompleted)
   })
 _sym_db.RegisterMessage(RemoveUnwantedVideoCompleted)
+
+BlackOutUnwantedVideoCompleted = _reflection.GeneratedProtocolMessageType('BlackOutUnwantedVideoCompleted', (_message.Message,), {
+  'DESCRIPTOR' : _BLACKOUTUNWANTEDVIDEOCOMPLETED,
+  '__module__' : 'events_monitoring.v1.expectations_pb2'
+  # @@protoc_insertion_point(class_scope:events_monitoring.v1.BlackOutUnwantedVideoCompleted)
+  })
+_sym_db.RegisterMessage(BlackOutUnwantedVideoCompleted)
 
 ComputeWaveformCompleted = _reflection.GeneratedProtocolMessageType('ComputeWaveformCompleted', (_message.Message,), {
   'DESCRIPTOR' : _COMPUTEWAVEFORMCOMPLETED,
