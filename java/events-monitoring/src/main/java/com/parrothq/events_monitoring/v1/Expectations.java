@@ -40,6 +40,11 @@ public final class Expectations {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_events_monitoring_v1_RemoveUnwantedVideoCompleted_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_events_monitoring_v1_BlackOutUnwantedVideoCompleted_descriptor;
+  static final
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_events_monitoring_v1_BlackOutUnwantedVideoCompleted_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_events_monitoring_v1_ComputeWaveformCompleted_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -87,17 +92,18 @@ public final class Expectations {
       " \001(\010\022\032\n\022has_unwanted_parts\030\005 \001(\010\"\033\n\031Tran" +
       "scodingAudioCompleted\"\033\n\031TranscodingVide" +
       "oCompleted\"\036\n\034RemoveUnwantedAudioComplet" +
-      "ed\"\036\n\034RemoveUnwantedVideoCompleted\"\032\n\030Co" +
-      "mputeWaveformCompleted\"\032\n\030ProcessExhibit" +
-      "sCompleted\"!\n\037RecordingPreprocessingComp" +
-      "leted\"1\n\021RoughDraftStarted\022\034\n\024audio_leng" +
-      "th_seconds\030\001 \001(\005\"\034\n\032GenerateDocumentsCom" +
-      "pleted\"%\n\023RoughDraftCompleted\022\016\n\006status\030" +
-      "\001 \001(\t*F\n\017RecordingSource\022\034\n\030RECORDING_SO" +
-      "URCE_UNKNOWN\020\000\022\n\n\006UPLOAD\020\001\022\t\n\005EVENT\020\002*F\n" +
-      "\rRecordingType\022\032\n\026RECORDING_TYPE_UNKNOWN" +
-      "\020\000\022\r\n\tRESERVOIR\020\001\022\n\n\006CLIENT\020\002B%\n!com.par" +
-      "rothq.events_monitoring.v1P\001b\006proto3"
+      "ed\"\036\n\034RemoveUnwantedVideoCompleted\" \n\036Bl" +
+      "ackOutUnwantedVideoCompleted\"\032\n\030ComputeW" +
+      "aveformCompleted\"\032\n\030ProcessExhibitsCompl" +
+      "eted\"!\n\037RecordingPreprocessingCompleted\"" +
+      "1\n\021RoughDraftStarted\022\034\n\024audio_length_sec" +
+      "onds\030\001 \001(\005\"\034\n\032GenerateDocumentsCompleted" +
+      "\"%\n\023RoughDraftCompleted\022\016\n\006status\030\001 \001(\t*" +
+      "F\n\017RecordingSource\022\034\n\030RECORDING_SOURCE_U" +
+      "NKNOWN\020\000\022\n\n\006UPLOAD\020\001\022\t\n\005EVENT\020\002*F\n\rRecor" +
+      "dingType\022\032\n\026RECORDING_TYPE_UNKNOWN\020\000\022\r\n\t" +
+      "RESERVOIR\020\001\022\n\n\006CLIENT\020\002B%\n!com.parrothq." +
+      "events_monitoring.v1P\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -133,38 +139,44 @@ public final class Expectations {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_events_monitoring_v1_RemoveUnwantedVideoCompleted_descriptor,
         new java.lang.String[] { });
-    internal_static_events_monitoring_v1_ComputeWaveformCompleted_descriptor =
+    internal_static_events_monitoring_v1_BlackOutUnwantedVideoCompleted_descriptor =
       getDescriptor().getMessageTypes().get(5);
+    internal_static_events_monitoring_v1_BlackOutUnwantedVideoCompleted_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_events_monitoring_v1_BlackOutUnwantedVideoCompleted_descriptor,
+        new java.lang.String[] { });
+    internal_static_events_monitoring_v1_ComputeWaveformCompleted_descriptor =
+      getDescriptor().getMessageTypes().get(6);
     internal_static_events_monitoring_v1_ComputeWaveformCompleted_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_events_monitoring_v1_ComputeWaveformCompleted_descriptor,
         new java.lang.String[] { });
     internal_static_events_monitoring_v1_ProcessExhibitsCompleted_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_events_monitoring_v1_ProcessExhibitsCompleted_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_events_monitoring_v1_ProcessExhibitsCompleted_descriptor,
         new java.lang.String[] { });
     internal_static_events_monitoring_v1_RecordingPreprocessingCompleted_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_events_monitoring_v1_RecordingPreprocessingCompleted_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_events_monitoring_v1_RecordingPreprocessingCompleted_descriptor,
         new java.lang.String[] { });
     internal_static_events_monitoring_v1_RoughDraftStarted_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_events_monitoring_v1_RoughDraftStarted_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_events_monitoring_v1_RoughDraftStarted_descriptor,
         new java.lang.String[] { "AudioLengthSeconds", });
     internal_static_events_monitoring_v1_GenerateDocumentsCompleted_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_events_monitoring_v1_GenerateDocumentsCompleted_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_events_monitoring_v1_GenerateDocumentsCompleted_descriptor,
         new java.lang.String[] { });
     internal_static_events_monitoring_v1_RoughDraftCompleted_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_events_monitoring_v1_RoughDraftCompleted_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_events_monitoring_v1_RoughDraftCompleted_descriptor,
