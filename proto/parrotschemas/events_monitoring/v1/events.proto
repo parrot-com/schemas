@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package events_monitoring.v1;
+package parrotschemas.events_monitoring.v1;
 
 option java_multiple_files = true;
 option java_package = "com.parrothq.events_monitoring.v1";
