@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - pypi
 
 jobs:
   Publish:
