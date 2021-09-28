@@ -1,0 +1,18 @@
+Metadata-Version: 1.2
+Name: parrotschemas
+Version: 0.1.2
+Summary: Protobuf schemas for Parrot.
+Home-page: https://github.com/parrot-com/schemas
+Author: Parrot
+Maintainer: Parrot
+License: UNKNOWN
+Project-URL: Source Code, https://github.com/parrot-com/schemas
+Description: UNKNOWN
+Keywords: protobuf,schemas
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.6
