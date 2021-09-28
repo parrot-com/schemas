@@ -27,6 +27,7 @@ jobs:
         working-directory: python/events-monitoring
 
       - name: Publish distribution 📦 to Test PyPI
+        if: github.ref == 'refs/branches/main'
         uses: pypa/gh-action-pypi-publish@master
         with:
           password: ${{ secrets.TEST_PYPI_API_TOKEN }}
