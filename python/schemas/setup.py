@@ -9,7 +9,7 @@ setup(
     author="Parrot",
     maintainer="Parrot",
     keywords=["protobuf", "schemas"],
-    version="0.1.3",
+    version="0.1.4",
     packages=find_packages(where="src"),
     package_dir={"": "src"},
     python_requires=">=3.6",
