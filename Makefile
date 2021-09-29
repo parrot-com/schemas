@@ -9,3 +9,4 @@ build-events-monitoring:
 		--python_out=python/schemas/src/ \
 		--java_out=java/events-monitoring/src/main/java/ \
 		proto/parrotschemas/events_monitoring/v1/*.proto
+	@find python/schemas/src/parrotschemas -type d -exec touch {}/__init__.py \;
